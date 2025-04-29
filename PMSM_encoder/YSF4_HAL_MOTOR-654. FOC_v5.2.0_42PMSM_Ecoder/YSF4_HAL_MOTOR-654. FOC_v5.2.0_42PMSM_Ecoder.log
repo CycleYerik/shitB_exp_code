@@ -1,0 +1,917 @@
+2022-05-29 10:30:12,478 DEBUG [Main.lambda$run$0] Arguments: [-ioc, D:\examples\YSF4_HAL_MOTOR-654. FOC_v5.2.0_42PMSM_Ecoder\YSF4_HAL_MOTOR-654. FOC_v5.2.0_42PMSM_Ecoder.ioc, -xdm, D:\examples\YSF4_HAL_MOTOR-654. FOC_v5.2.0_42PMSM_Ecoder\YSF4_HAL_MOTOR-654. FOC_v5.2.0_42PMSM_Ecoder.wb_def]
+2022-05-29 10:30:12,494 DEBUG [ArgsValue.readPropertiesFile] [AppConfig] pack.source = "D:\Program Files (x86)\STMicroelectronics\MC_SDK_5.2.0\Middlewares\ST\MotorControl" 
+2022-05-29 10:30:12,494 DEBUG [ArgsValue.readPropertiesFile] [UserConfig] do not exist in "C:\Users\wbbhi\.st_motor_control\wb2mx.properties" 
+2022-05-29 10:30:12,494 DEBUG [ArgsValue.getConfigProperties] pack.source = "../../../../Middlewares/ST/MotorControl"
+2022-05-29 10:30:12,510 DEBUG [ArgsValue.lambda$retrieve$2] CLI_ARG[xdm]: D:\examples\YSF4_HAL_MOTOR-654. FOC_v5.2.0_42PMSM_Ecoder\YSF4_HAL_MOTOR-654. FOC_v5.2.0_42PMSM_Ecoder.wb_def
+2022-05-29 10:30:12,510 DEBUG [ArgsValue.lambda$retrieve$2] CLI_ARG[ioc]: D:\examples\YSF4_HAL_MOTOR-654. FOC_v5.2.0_42PMSM_Ecoder\YSF4_HAL_MOTOR-654. FOC_v5.2.0_42PMSM_Ecoder.ioc
+2022-05-29 10:30:12,525 DEBUG [ArgsValue.retrieve] {xdm=D:\examples\YSF4_HAL_MOTOR-654. FOC_v5.2.0_42PMSM_Ecoder\YSF4_HAL_MOTOR-654. FOC_v5.2.0_42PMSM_Ecoder.wb_def, updftl=templates/wb_ioc_mc-middleware.ftl, mx_timeout=-1, exp=templates/wb-defines_where_and_what.txt, ioc=D:\examples\YSF4_HAL_MOTOR-654. FOC_v5.2.0_42PMSM_Ecoder\YSF4_HAL_MOTOR-654. FOC_v5.2.0_42PMSM_Ecoder.ioc, pack=../../../../Middlewares/ST/MotorControl, ftl=templates/wb_ioc_template.ftl}
+2022-05-29 10:30:12,556 DEBUG [WindowsCubeMxFinder.lambda$findThem$2] Found 64-bit subkey HKEY_LOCAL_MACHINE\~~~\Uninstall\STM32CubeMX
+2022-05-29 10:30:12,572 DEBUG [CubeMxCtx.EXE_version] Loaded path: 'D:\Program Files\STMicroelectronics\STM32Cube\STM32CubeMX\STM32CubeMX.exe'
+2022-05-29 10:30:12,572 DEBUG [CubeMxCtx.EXE_version] Loaded updater jar: 'D:\Program Files\STMicroelectronics\STM32Cube\STM32CubeMX\plugins\updater.jar'
+2022-05-29 10:30:21,120 DEBUG [EnvironmentChecker.checkPack] STM32CubeMX.Version: 5.6.1-RC1
+2022-05-29 10:30:21,401 DEBUG [EnvironmentChecker.checkPack] Waiting for updater to end working process
+2022-05-29 10:30:21,620 DEBUG [EnvironmentChecker.checkPack] Updater now available
+2022-05-29 10:30:21,620 DEBUG [RetrieveFirmwareVersion.from_PackConfig_xfile] Looking for version from MotorControl_Configs.xml: D:\Program Files (x86)\STMicroelectronics\MC_SDK_5.2.0\Middlewares\ST\MotorControl\MotorControl_Configs.xml
+2022-05-29 10:30:21,682 DEBUG [RetrieveFirmwareVersion.minimum_supporte_version] minimum_supporte_version MotorControlFirmware.Version: 5.2.0
+2022-05-29 10:30:21,698 DEBUG [EnvironmentChecker.deploy_MCPack_to_MxRepo] Deployment strategy class: VersionedFolderStyle_MCPackDeployer
+2022-05-29 10:30:21,698 DEBUG [EnvironmentChecker.deploy_MCPack_to_MxRepo] Expected MC Pack 5.2.0-Full already deployed
+2022-05-29 10:30:21,745 DEBUG [DataSetUpdater.update] Updating data set
+2022-05-29 10:30:21,745 DEBUG [DataSetUpdater.update] Update done
+2022-05-29 10:30:21,745 INFO  [IocGenerator.logModulesVersionInfo] Version info: 
+2022-05-29 10:30:21,745 INFO  [IocGenerator.logModulesVersionInfo]   MC Workbench       : 5.2.0.18503
+2022-05-29 10:30:21,760 INFO  [IocGenerator.logModulesVersionInfo]   WB_to_Mx           : 0.13.3.template-18-08-02
+2022-05-29 10:30:21,760 INFO  [IocGenerator.logModulesVersionInfo]   STM32CubeMX        : 5.6.1
+2022-05-29 10:30:21,760 INFO  [IocGenerator.logModulesVersionInfo]   MC Firmware Library: 5.2.0-Full
+2022-05-29 10:30:21,792 INFO  [IocGenerator.logModulesVersionInfo] Generation options: 
+2022-05-29 10:30:21,807 INFO  [IocGenerator.logModulesVersionInfo]   Target Toolchain   : Keil MDK-ARM V5
+2022-05-29 10:30:21,807 INFO  [IocGenerator.logModulesVersionInfo]   Target Driver      : HAL - Hardware Abstraction Layer
+
+2022-05-29 10:30:21,807 DEBUG [IocGenerator.process] Generating ioc file: D:\examples\YSF4_HAL_MOTOR-654. FOC_v5.2.0_42PMSM_Ecoder\YSF4_HAL_MOTOR-654. FOC_v5.2.0_42PMSM_Ecoder.ioc
+2022-05-29 10:30:21,807 DEBUG [IocGenerator.createOutput] Generating file from template templates\wb_ioc_template.ftl
+2022-05-29 10:30:23,057 DEBUG [IocGenerator.process] Generated ioc file D:\examples\YSF4_HAL_MOTOR-654. FOC_v5.2.0_42PMSM_Ecoder\YSF4_HAL_MOTOR-654. FOC_v5.2.0_42PMSM_Ecoder.ioc
+2022-05-29 10:30:23,057 INFO  [LineInfo_to_exitCode.log_LineInfo] Generated ioc: D:\examples\YSF4_HAL_MOTOR-654. FOC_v5.2.0_42PMSM_Ecoder\YSF4_HAL_MOTOR-654. FOC_v5.2.0_42PMSM_Ecoder.ioc
+2022-05-29 10:30:23,120 INFO  [Wb2MxProcess.lambda$create_extSettings_file_in$82c805cd$1] Generated D:\examples\YSF4_HAL_MOTOR-654. FOC_v5.2.0_42PMSM_Ecoder\.extSettings
+2022-05-29 10:30:23,432 DEBUG [CubeMxRunner.create_code_generation_script_for] Generated CubeMx script file: C:\Users\wbbhi\AppData\Local\Temp\WB_to_Mx-ysfhalmotorfocvpmsmecoder-7910836858201759967.script
+2022-05-29 10:30:23,432 DEBUG [SignalCatcher.listenTo] Listen to signal INT
+2022-05-29 10:30:23,432 DEBUG [SignalCatcher.listenTo] Listen to signal TERM
+2022-05-29 10:30:23,432 INFO  [CubeMxRunner.run$] Code generation started
+2022-05-29 10:30:23,704 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:23,704 [INFO] MicroXplorer:570 - Detected Java Version = 1.8.0_191
+2022-05-29 10:30:23,719 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:23,719 [INFO] ApplicationProperties:181 - Using Application install path: D:\Program Files\STMicroelectronics\STM32Cube\STM32CubeMX
+2022-05-29 10:30:23,751 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:23,735 [INFO] DbMcusXml:72 - Set database path to: D:\Program Files\STMicroelectronics\STM32Cube\STM32CubeMX\\db\/mcu/
+2022-05-29 10:30:23,751 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:23,751 [INFO] DbBoardsPdsc:54 - Set plugin database path to: D:\Program Files\STMicroelectronics\STM32Cube\STM32CubeMX\\db\/plugins/boardmanager/
+2022-05-29 10:30:23,751 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:23,751 [INFO] DbMcus:235 - Set plugin images path to: D:\Program Files\STMicroelectronics\STM32Cube\STM32CubeMX\\db\/plugins/mcufinder/images/
+2022-05-29 10:30:23,751 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:23,751 [INFO] DbBoards:232 - Set plugin images path to: D:\Program Files\STMicroelectronics\STM32Cube\STM32CubeMX\\db\/plugins/mcufinder/images/
+2022-05-29 10:30:23,766 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:23,766 [INFO] DbMcusAds:85 - Set database path to: C:\Users\wbbhi\.stmcufinder\plugins\mcufinder//mcu/
+2022-05-29 10:30:23,766 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:23,766 [INFO] DbMcusDocs:108 - Set database path to: C:\Users\wbbhi\.stmcufinder\plugins\mcufinder//mcu/
+2022-05-29 10:30:23,766 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:23,766 [INFO] DbMcusJson:61 - Set database path to: C:\Users\wbbhi\.stmcufinder\plugins\mcufinder//mcu/
+2022-05-29 10:30:23,766 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:23,766 [INFO] DbBoardsDocs:97 - Set database path to: C:\Users\wbbhi\.stmcufinder\plugins\mcufinder//mcu/
+2022-05-29 10:30:23,766 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:23,766 [INFO] DbBoardsJson:51 - Set database path to: C:\Users\wbbhi\.stmcufinder\plugins\mcufinder//mcu/
+2022-05-29 10:30:34,914 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:34,914 [INFO] CrossReferenceDbSqlite:197 - Set database path to: C:\Users\wbbhi\.stmcufinder\plugins\mcufinder//mcu/cs/
+2022-05-29 10:30:35,184 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:35,184 [INFO] RulesReader:52 - Compatibility file has been processed (208 Rules)
+2022-05-29 10:30:35,231 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:35,231 [INFO] STM32CubeMX:31 - Starting STM32CubeMX
+2022-05-29 10:30:35,856 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:35,856 [INFO] MainPanel:181 - HeapMemory: 128974848
+2022-05-29 10:30:36,012 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:36,012 [INFO] DbMcusXml:72 - Set database path to: D:\Program Files\STMicroelectronics\STM32Cube\STM32CubeMX\\db\/mcu/
+2022-05-29 10:30:36,012 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:36,012 [INFO] DbBoardsPdsc:54 - Set plugin database path to: D:\Program Files\STMicroelectronics\STM32Cube\STM32CubeMX\\db\/plugins/boardmanager/
+2022-05-29 10:30:36,012 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:36,012 [INFO] DbMcus:235 - Set plugin images path to: D:\Program Files\STMicroelectronics\STM32Cube\STM32CubeMX\\db\/plugins/mcufinder/images/
+2022-05-29 10:30:36,012 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:36,012 [INFO] DbBoards:232 - Set plugin images path to: D:\Program Files\STMicroelectronics\STM32Cube\STM32CubeMX\\db\/plugins/mcufinder/images/
+2022-05-29 10:30:36,012 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:36,012 [INFO] DbMcusAds:85 - Set database path to: C:\Users\wbbhi\.stmcufinder\plugins\mcufinder//mcu/
+2022-05-29 10:30:36,027 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:36,012 [INFO] DbMcusDocs:108 - Set database path to: C:\Users\wbbhi\.stmcufinder\plugins\mcufinder//mcu/
+2022-05-29 10:30:36,027 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:36,027 [INFO] DbMcusJson:61 - Set database path to: C:\Users\wbbhi\.stmcufinder\plugins\mcufinder//mcu/
+2022-05-29 10:30:36,027 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:36,027 [INFO] DbBoardsDocs:97 - Set database path to: C:\Users\wbbhi\.stmcufinder\plugins\mcufinder//mcu/
+2022-05-29 10:30:36,027 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:36,027 [INFO] DbBoardsJson:51 - Set database path to: C:\Users\wbbhi\.stmcufinder\plugins\mcufinder//mcu/
+2022-05-29 10:30:36,027 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:36,027 [INFO] CrossReferenceDbSqlite:197 - Set database path to: C:\Users\wbbhi\.stmcufinder\plugins\mcufinder//mcu/cs/
+2022-05-29 10:30:36,059 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:36,043 [INFO] ApplicationProperties:181 - Using Application install path: D:\Program Files\STMicroelectronics\STM32Cube\STM32CubeMX
+2022-05-29 10:30:36,059 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:36,059 [INFO] PluginManage:178 - Search for loadable plugins [exclusion list=, tutovideos]
+2022-05-29 10:30:36,059 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:36,059 [INFO] PluginManage:292 - Check plugin analytics
+2022-05-29 10:30:36,402 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:36,402 [INFO] AnalyticsPlugin:172 - Accepted Software Licenses: 
+2022-05-29 10:30:36,402 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:36,402 [INFO] AnalyticsPlugin:174 - Accepted CMSIS Pack Licenses: 
+2022-05-29 10:30:36,402 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:36,402 [INFO] AnalyticsPlugin:176 - Accepted Firmware Licenses: 
+2022-05-29 10:30:36,402 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:36,402 [INFO] PluginManage:342 - Loaded plugin analytics (category:tool,tabindex:-1)
+2022-05-29 10:30:36,402 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:36,402 [INFO] PluginManage:292 - Check plugin clock
+2022-05-29 10:30:36,418 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:36,418 [INFO] PluginManage:342 - Loaded plugin clock (category:base,tabindex:2)
+2022-05-29 10:30:36,418 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:36,418 [INFO] PluginManage:292 - Check plugin ddr
+2022-05-29 10:30:36,418 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:36,418 [INFO] PluginManage:342 - Loaded plugin ddr (category:tool,tabindex:6)
+2022-05-29 10:30:36,418 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:36,418 [INFO] PluginManage:292 - Check plugin filemanager
+2022-05-29 10:30:36,637 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:36,637 [INFO] PluginManage:342 - Loaded plugin filemanager (category:base,tabindex:10)
+2022-05-29 10:30:36,637 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:36,637 [INFO] PluginManage:292 - Check plugin ipmanager
+2022-05-29 10:30:36,668 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:36,652 [INFO] PluginManage:342 - Loaded plugin ipmanager (category:base,tabindex:5)
+2022-05-29 10:30:36,668 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:36,668 [INFO] PluginManage:292 - Check plugin pinoutandconfiguration
+2022-05-29 10:30:36,668 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:36,668 [INFO] PluginManage:342 - Loaded plugin pinoutandconfiguration (category:base,tabindex:1)
+2022-05-29 10:30:36,668 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:36,668 [INFO] PluginManage:292 - Check plugin pinoutconfig
+2022-05-29 10:30:36,777 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:36,777 [INFO] PluginManage:342 - Loaded plugin pinoutconfig (category:base,tabindex:0)
+2022-05-29 10:30:36,777 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:36,777 [INFO] PluginManage:292 - Check plugin power
+2022-05-29 10:30:36,793 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:36,793 [INFO] PluginManage:342 - Loaded plugin power (category:power,tabindex:4)
+2022-05-29 10:30:36,793 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:36,793 [INFO] PluginManage:292 - Check plugin projectmanager
+2022-05-29 10:30:36,902 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:36,887 [INFO] PluginManage:342 - Loaded plugin projectmanager (category:projectmanager,tabindex:3)
+2022-05-29 10:30:36,902 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:36,902 [INFO] PluginManage:292 - Check plugin thirdparty
+2022-05-29 10:30:37,012 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:37,012 [INFO] ThirdPartyDb:295 - Open Third Party DataBase File (C:/Users/wbbhi/.stm32cubemx/plugins/thirdparty/db/thirdparties_db.xml) : 47 ms. number of Sw pack : 8
+2022-05-29 10:30:37,043 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:37,043 [INFO] PluginManage:342 - Loaded plugin thirdparty (category:base,tabindex:-1)
+2022-05-29 10:30:37,043 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:37,043 [INFO] PluginManage:292 - Check plugin tools
+2022-05-29 10:30:37,043 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:37,043 [INFO] PluginManage:342 - Loaded plugin tools (category:base,tabindex:7)
+2022-05-29 10:30:37,043 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:37,043 [INFO] PluginManage:292 - Check plugin tutovideos
+2022-05-29 10:30:37,043 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:37,043 [INFO] PluginManage:347 - Ignore plugin tutovideos (category:base)
+2022-05-29 10:30:37,043 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:37,043 [INFO] PluginManage:292 - Check plugin updater
+2022-05-29 10:30:37,058 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:37,058 [INFO] PluginManage:342 - Loaded plugin updater (category:base,tabindex:12)
+2022-05-29 10:30:37,058 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:37,058 [INFO] PluginManage:265 - PluginManage : Loaded plugins [12]
+2022-05-29 10:30:37,308 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:37,308 [INFO] PinOutPanel:1420 - setPackage(No Configuration,No Configuration)
+2022-05-29 10:30:37,418 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:37,418 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2022-05-29 10:30:37,418 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:37,418 [INFO] PluginManager:200 - loadIPPluginJar : add adc
+2022-05-29 10:30:37,418 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:37,418 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2022-05-29 10:30:37,418 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:37,418 [INFO] PluginManager:200 - loadIPPluginJar : add aes
+2022-05-29 10:30:37,418 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:37,418 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2022-05-29 10:30:37,418 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:37,418 [INFO] PluginManager:200 - loadIPPluginJar : add can
+2022-05-29 10:30:37,418 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:37,418 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2022-05-29 10:30:37,418 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:37,418 [INFO] PluginManager:200 - loadIPPluginJar : add comp
+2022-05-29 10:30:37,433 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:37,418 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2022-05-29 10:30:37,433 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:37,418 [INFO] PluginManager:200 - loadIPPluginJar : add cryp
+2022-05-29 10:30:37,433 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:37,433 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2022-05-29 10:30:37,433 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:37,433 [INFO] PluginManager:200 - loadIPPluginJar : add dfsdm
+2022-05-29 10:30:37,433 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:37,433 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2022-05-29 10:30:37,433 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:37,433 [INFO] PluginManager:200 - loadIPPluginJar : add dma
+2022-05-29 10:30:37,433 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:37,433 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2022-05-29 10:30:37,433 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:37,433 [INFO] PluginManager:200 - loadIPPluginJar : add fatfs
+2022-05-29 10:30:37,449 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:37,449 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2022-05-29 10:30:37,449 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:37,449 [INFO] PluginManager:200 - loadIPPluginJar : add fmc
+2022-05-29 10:30:37,449 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:37,449 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2022-05-29 10:30:37,449 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:37,449 [INFO] PluginManager:200 - loadIPPluginJar : add freertos
+2022-05-29 10:30:37,449 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:37,449 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2022-05-29 10:30:37,449 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:37,449 [INFO] PluginManager:200 - loadIPPluginJar : add genericplugin
+2022-05-29 10:30:37,449 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:37,449 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2022-05-29 10:30:37,449 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:37,449 [INFO] PluginManager:200 - loadIPPluginJar : add gfxmmu
+2022-05-29 10:30:37,465 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:37,465 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2022-05-29 10:30:37,465 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:37,465 [INFO] PluginManager:200 - loadIPPluginJar : add gic
+2022-05-29 10:30:37,465 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:37,465 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2022-05-29 10:30:37,465 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:37,465 [INFO] PluginManager:200 - loadIPPluginJar : add gpio
+2022-05-29 10:30:37,465 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:37,465 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2022-05-29 10:30:37,465 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:37,465 [INFO] PluginManager:200 - loadIPPluginJar : add gtzc
+2022-05-29 10:30:37,465 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:37,465 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2022-05-29 10:30:37,465 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:37,465 [INFO] PluginManager:200 - loadIPPluginJar : add hash
+2022-05-29 10:30:37,480 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:37,480 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2022-05-29 10:30:37,480 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:37,480 [INFO] PluginManager:200 - loadIPPluginJar : add i2c
+2022-05-29 10:30:37,480 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:37,480 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2022-05-29 10:30:37,480 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:37,480 [INFO] PluginManager:200 - loadIPPluginJar : add i2s
+2022-05-29 10:30:37,480 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:37,480 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2022-05-29 10:30:37,480 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:37,480 [INFO] PluginManager:200 - loadIPPluginJar : add ipddr
+2022-05-29 10:30:37,480 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:37,480 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2022-05-29 10:30:37,480 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:37,480 [INFO] PluginManager:200 - loadIPPluginJar : add ltdc
+2022-05-29 10:30:37,480 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:37,480 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2022-05-29 10:30:37,480 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:37,480 [INFO] PluginManager:200 - loadIPPluginJar : add mdma
+2022-05-29 10:30:37,496 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:37,496 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2022-05-29 10:30:37,496 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:37,496 [INFO] PluginManager:200 - loadIPPluginJar : add nvic
+2022-05-29 10:30:37,496 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:37,496 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2022-05-29 10:30:37,496 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:37,496 [INFO] PluginManager:200 - loadIPPluginJar : add opamp
+2022-05-29 10:30:37,496 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:37,496 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2022-05-29 10:30:37,496 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:37,496 [INFO] PluginManager:200 - loadIPPluginJar : add pdm2pcm
+2022-05-29 10:30:37,511 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:37,511 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2022-05-29 10:30:37,527 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:37,527 [INFO] PluginManager:200 - loadIPPluginJar : add plateformsettings
+2022-05-29 10:30:37,527 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:37,527 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2022-05-29 10:30:37,527 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:37,527 [INFO] PluginManager:200 - loadIPPluginJar : add quadspi
+2022-05-29 10:30:37,543 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:37,543 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2022-05-29 10:30:37,543 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:37,543 [INFO] PluginManager:200 - loadIPPluginJar : add resmgrutility
+2022-05-29 10:30:37,543 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:37,543 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2022-05-29 10:30:37,543 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:37,543 [INFO] PluginManager:200 - loadIPPluginJar : add sai
+2022-05-29 10:30:37,543 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:37,543 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2022-05-29 10:30:37,543 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:37,543 [INFO] PluginManager:200 - loadIPPluginJar : add spi
+2022-05-29 10:30:37,543 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:37,543 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2022-05-29 10:30:37,543 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:37,543 [INFO] PluginManager:200 - loadIPPluginJar : add stm32_wpan
+2022-05-29 10:30:37,543 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:37,543 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2022-05-29 10:30:37,558 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:37,543 [INFO] PluginManager:200 - loadIPPluginJar : add tim
+2022-05-29 10:30:37,558 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:37,558 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2022-05-29 10:30:37,558 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:37,558 [INFO] PluginManager:200 - loadIPPluginJar : add touchsensing
+2022-05-29 10:30:37,558 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:37,558 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2022-05-29 10:30:37,558 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:37,558 [INFO] PluginManager:200 - loadIPPluginJar : add tracer_emb
+2022-05-29 10:30:37,558 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:37,558 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2022-05-29 10:30:37,558 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:37,558 [INFO] PluginManager:200 - loadIPPluginJar : add ts
+2022-05-29 10:30:37,558 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:37,558 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2022-05-29 10:30:37,558 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:37,558 [INFO] PluginManager:200 - loadIPPluginJar : add tsc
+2022-05-29 10:30:37,558 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:37,558 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2022-05-29 10:30:37,558 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:37,558 [INFO] PluginManager:200 - loadIPPluginJar : add ucpd
+2022-05-29 10:30:37,574 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:37,574 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2022-05-29 10:30:37,574 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:37,574 [INFO] PluginManager:200 - loadIPPluginJar : add usart
+2022-05-29 10:30:39,011 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:39,011 [INFO] Updater:886 - Updater Version found : 5.6.1
+2022-05-29 10:30:39,027 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:39,027 [INFO] ApplicationProperties:181 - Using Application install path: D:\Program Files\STMicroelectronics\STM32Cube\STM32CubeMX
+2022-05-29 10:30:39,167 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:39,167 [INFO] MainUpdater:2230 - connection check result : 10
+2022-05-29 10:30:39,167 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:39,167 [INFO] MainUpdater:236 - Updater Check For Update Now.
+2022-05-29 10:30:39,167 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:39,167 [INFO] MicroXplorer:420 - Change Database Version : DB.5.0.60
+2022-05-29 10:30:39,333 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:39,333 [INFO] CheckServerUpdateThread:92 - End of CheckServer Thread
+2022-05-29 10:30:39,799 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:39,799 [INFO] DbMcusAds:143 - JSON generation date=Thu Feb 21 00:46:15 CST 2019 (1550681175)
+2022-05-29 10:30:39,799 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:39,799 [INFO] LoadUrlFilesThread:161 - End of LoadServerUrlFiles without Thread
+2022-05-29 10:30:39,815 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:39,815 [INFO] McuDetailPanel:181 - Set advertising image to C:/Users/wbbhi/STM32Cube/Repository/\PRSTM32MP10219-01-med.jpg
+2022-05-29 10:30:39,830 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:39,830 [INFO] LoadUrlFilesThread:161 - End of LoadServerUrlFiles without Thread
+2022-05-29 10:30:39,830 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:39,830 [INFO] McuDetailPanel:181 - Set advertising image to C:/Users/wbbhi/STM32Cube/Repository/\PRSTM32MP10219-01-med.jpg
+2022-05-29 10:30:39,877 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:39,877 [INFO] MicroXplorer:390 - Change Database Path : 
+2022-05-29 10:30:39,877 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:39,877 [INFO] MicroXplorer:420 - Change Database Version : DB.5.0.60
+2022-05-29 10:30:39,877 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:39,877 [INFO] PinOutPanel:1420 - setPackage(No Configuration,No Configuration)
+2022-05-29 10:30:39,940 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:39,940 [INFO] New_gui_TipPanel:187 - scale :0.5042301184433164
+2022-05-29 10:30:40,112 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:40,112 [INFO] ThirdPartyDb:261 - Close Third Party DataBase File (C:/Users/wbbhi/.stm32cubemx/plugins/thirdparty/db/thirdparties_db.xml)
+2022-05-29 10:30:40,190 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:40,190 [INFO] IntegrityCheckThread:98 - End integrity checks thread
+2022-05-29 10:30:40,190 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:40,190 [INFO] MicroXplorer:390 - Change Database Path : 
+2022-05-29 10:30:40,190 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:40,190 [INFO] MicroXplorer:420 - Change Database Version : DB.5.0.60
+2022-05-29 10:30:40,190 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:40,190 [INFO] PinOutPanel:1420 - setPackage(No Configuration,No Configuration)
+2022-05-29 10:30:40,205 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:40,205 [INFO] UtilMem:74 - Begin LoadConfig() Used Memory: 39601640 Bytes (139460608)
+2022-05-29 10:30:40,205 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:40,205 [INFO] OpenFileManager:274 - Change cursor
+2022-05-29 10:30:46,317 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:46,317 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) Unable to find key (Mcu.ThirdPartyNb) in loaded IOC file
+2022-05-29 10:30:46,332 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:46,332 [INFO] ImportTextPane:162 - (OptionalMessage_WARN) Unknown mode (AF_PP) for pin (PB6)
+2022-05-29 10:30:46,332 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:46,332 [INFO] ImportTextPane:162 - (OptionalMessage_WARN) Unknown mode (AF_PP) for pin (PB7)
+2022-05-29 10:30:46,520 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:46,520 [INFO] ImportTextPane:162 - (OptionalMessage_INFO) Successful Mode recovery for pin (PB7) with mode (Asynchronous)
+2022-05-29 10:30:46,520 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:46,520 [INFO] ImportTextPane:162 - (OptionalMessage_INFO) Successful Mode recovery for pin (PB6) with mode (Asynchronous)
+2022-05-29 10:30:46,598 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:46,598 [INFO] ImportTextPane:162 - (OptionalMessage_INFO) Successful Mode recovery for pin (PA4) with mode (DAC_OUT1)
+2022-05-29 10:30:46,645 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:46,645 [INFO] ImportTextPane:162 - (OptionalMessage_INFO) Successful Mode recovery for pin (PA5) with mode (DAC_OUT2)
+2022-05-29 10:30:46,660 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:46,660 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (ADC1) : Invalid parameter (EnableInjectedConversion)
+2022-05-29 10:30:46,660 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:46,660 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (ADC1) : Parameter (Rank) has Id (1#ChannelInjectedConversion) currently not set
+2022-05-29 10:30:46,660 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:46,660 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (ADC1) : Parameter (Channel) has Id (1#ChannelInjectedConversion) currently not set
+2022-05-29 10:30:46,660 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:46,660 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (ADC1) : Parameter (SamplingTime) has Id (1#ChannelInjectedConversion) currently not set
+2022-05-29 10:30:46,660 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:46,660 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (ADC1) : Parameter (InjectedOffset) has Id (1#ChannelInjectedConversion) currently not set
+2022-05-29 10:30:46,660 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:46,660 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (ADC1) : Parameter (Rank) has Id (2#ChannelInjectedConversion) currently not set
+2022-05-29 10:30:46,660 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:46,660 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (ADC1) : Parameter (Channel) has Id (2#ChannelInjectedConversion) currently not set
+2022-05-29 10:30:46,660 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:46,660 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (ADC1) : Parameter (SamplingTime) has Id (2#ChannelInjectedConversion) currently not set
+2022-05-29 10:30:46,660 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:46,660 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (ADC1) : Parameter (InjectedOffset) has Id (2#ChannelInjectedConversion) currently not set
+2022-05-29 10:30:46,676 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:46,676 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (ADC1) : Parameter (Rank) has Id (3#ChannelInjectedConversion) currently not set
+2022-05-29 10:30:46,676 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:46,676 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (ADC1) : Parameter (Channel) has Id (3#ChannelInjectedConversion) currently not set
+2022-05-29 10:30:46,676 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:46,676 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (ADC1) : Parameter (SamplingTime) has Id (3#ChannelInjectedConversion) currently not set
+2022-05-29 10:30:46,676 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:46,676 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (ADC1) : Parameter (InjectedOffset) has Id (3#ChannelInjectedConversion) currently not set
+2022-05-29 10:30:46,676 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:46,676 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (ADC1) : Invalid parameter (EnableRegularConversion)
+2022-05-29 10:30:46,676 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:46,676 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (ADC1) : Parameter (Rank) has Id (1#ChannelRegularConversion) currently not set
+2022-05-29 10:30:46,676 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:46,676 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (ADC1) : Parameter (Channel) has Id (1#ChannelRegularConversion) currently not set
+2022-05-29 10:30:46,676 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:46,676 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (ADC1) : Parameter (SamplingTime) has Id (1#ChannelRegularConversion) currently not set
+2022-05-29 10:30:46,676 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:46,676 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (ADC1) : Invalid parameter (OffsetNumber)
+2022-05-29 10:30:46,692 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:46,676 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (ADC1) : Parameter (Offset) has Id (1#ChannelRegularConversion) currently not set
+2022-05-29 10:30:46,692 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:46,692 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (ADC1) : Parameter (Rank) has Id (2#ChannelRegularConversion) currently not set
+2022-05-29 10:30:46,692 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:46,692 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (ADC1) : Parameter (Channel) has Id (2#ChannelRegularConversion) currently not set
+2022-05-29 10:30:46,692 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:46,692 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (ADC1) : Parameter (SamplingTime) has Id (2#ChannelRegularConversion) currently not set
+2022-05-29 10:30:46,692 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:46,692 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (ADC1) : Invalid parameter (OffsetNumber)
+2022-05-29 10:30:46,692 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:46,692 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (ADC1) : Parameter (Offset) has Id (2#ChannelRegularConversion) currently not set
+2022-05-29 10:30:46,692 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:46,692 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (ADC2) : Invalid parameter (EnableInjectedConversion)
+2022-05-29 10:30:46,692 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:46,692 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (ADC2) : Parameter (Rank) has Id (1#ChannelInjectedConversion) currently not set
+2022-05-29 10:30:46,692 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:46,692 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (ADC2) : Parameter (Channel) has Id (1#ChannelInjectedConversion) currently not set
+2022-05-29 10:30:46,692 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:46,692 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (ADC2) : Parameter (SamplingTime) has Id (1#ChannelInjectedConversion) currently not set
+2022-05-29 10:30:46,692 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:46,692 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (ADC2) : Parameter (InjectedOffset) has Id (1#ChannelInjectedConversion) currently not set
+2022-05-29 10:30:46,692 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:46,692 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (ADC2) : Parameter (Rank) has Id (2#ChannelInjectedConversion) currently not set
+2022-05-29 10:30:46,692 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:46,692 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (ADC2) : Parameter (Channel) has Id (2#ChannelInjectedConversion) currently not set
+2022-05-29 10:30:46,692 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:46,692 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (ADC2) : Parameter (SamplingTime) has Id (2#ChannelInjectedConversion) currently not set
+2022-05-29 10:30:46,692 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:46,692 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (ADC2) : Parameter (InjectedOffset) has Id (2#ChannelInjectedConversion) currently not set
+2022-05-29 10:30:46,692 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:46,692 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (ADC2) : Parameter (Rank) has Id (3#ChannelInjectedConversion) currently not set
+2022-05-29 10:30:46,692 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:46,692 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (ADC2) : Parameter (Channel) has Id (3#ChannelInjectedConversion) currently not set
+2022-05-29 10:30:46,692 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:46,692 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (ADC2) : Parameter (SamplingTime) has Id (3#ChannelInjectedConversion) currently not set
+2022-05-29 10:30:46,692 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:46,692 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (ADC2) : Parameter (InjectedOffset) has Id (3#ChannelInjectedConversion) currently not set
+2022-05-29 10:30:46,692 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:46,692 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (ADC2) : Invalid parameter (EnableRegularConversion)
+2022-05-29 10:30:46,707 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:46,707 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (ADC2) : Parameter (Rank) has Id (1#ChannelRegularConversion) currently not set
+2022-05-29 10:30:46,707 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:46,707 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (ADC2) : Parameter (Channel) has Id (1#ChannelRegularConversion) currently not set
+2022-05-29 10:30:46,707 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:46,707 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (ADC2) : Parameter (SamplingTime) has Id (1#ChannelRegularConversion) currently not set
+2022-05-29 10:30:47,332 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:47,332 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (CPU_CLK_168_MHZ)
+2022-05-29 10:30:47,332 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:47,332 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (EXT_CLK_8_MHZ)
+2022-05-29 10:30:47,332 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:47,332 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Parameter (INRUSH_CURRLIMIT_AT_POWER_ON) has invalid value (true)
+2022-05-29 10:30:47,332 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:47,332 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (MAX_MODULATION_99_PER_CENT)
+2022-05-29 10:30:47,332 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:47,332 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (MC_WORKBENCH_VERSION)
+2022-05-29 10:30:47,332 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:47,332 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (MCU)
+2022-05-29 10:30:47,332 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:47,332 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (MOTOR_TYPE)
+2022-05-29 10:30:47,348 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:47,348 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (OCP_COMP_THRESHOLD)
+2022-05-29 10:30:47,348 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:47,348 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Parameter (OVERCURR_FEEDBACK_POLARITY) has invalid value (EMSTOP_ACTIVE_LOW)
+2022-05-29 10:30:47,363 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:47,363 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (WB_to_Mx_template_version)
+2022-05-29 10:30:47,363 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:47,363 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (WB_to_Mx_version)
+2022-05-29 10:30:47,363 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:47,363 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (RCC) : Parameter (48MHZClocksFreq_Value) has invalid value (84000000)
+2022-05-29 10:30:47,363 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:47,363 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (RCC) : Parameter (RTCHSEDivFreq_Value) has invalid value (4000000)
+2022-05-29 10:30:47,379 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:47,379 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (TIM8) : Parameter (Pulse) has Id (PWM Generation1 CH1) currently not set
+2022-05-29 10:30:47,379 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:47,379 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (TIM8) : Parameter (Pulse) has Id (PWM Generation2 CH2) currently not set
+2022-05-29 10:30:47,379 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:47,379 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (TIM8) : Parameter (Pulse) has Id (PWM Generation3 CH3) currently not set
+2022-05-29 10:30:47,988 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:47,988 [INFO] UtilMem:74 - End LoadConfig() Used Memory: 112317000 Bytes (825753600)
+2022-05-29 10:30:47,988 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:47,988 [INFO] DbMcusXml:110 - Load MCU database from D:\Program Files\STMicroelectronics\STM32Cube\STM32CubeMX\\db\/mcu/families.xml
+2022-05-29 10:30:49,097 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:49,097 [INFO] DbMcusJson:90 - JSON generation date=Tue Feb 11 23:02:54 CST 2020 (1581433374)
+2022-05-29 10:30:50,035 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,035 [INFO] DbMcus:171 - Found 1670 MCUs (1625 are supported by CubeMX, 1625 are visible in CubeMX)
+2022-05-29 10:30:50,035 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,035 [INFO] ApiDb:147 - User favorites file not found: C:\Users\wbbhi/.stm32cubemx/favorites.mcus.txt
+2022-05-29 10:30:50,035 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,035 [INFO] DbMcus:183 - Set 0 / 0 favorites MCUs
+2022-05-29 10:30:50,066 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,050 [INFO] ThirdPartyDb:295 - Open Third Party DataBase File (C:/Users/wbbhi/.stm32cubemx/plugins/thirdparty/db/thirdparties_db.xml) : 0 ms. number of Sw pack : 8
+2022-05-29 10:30:50,206 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,206 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,206 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,206 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,206 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,206 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,206 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,206 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,206 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,206 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,206 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,206 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,206 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,206 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,206 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,206 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,206 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,206 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,206 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,206 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,206 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,206 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,206 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,206 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,206 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,206 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269378]
+2022-05-29 10:30:50,206 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,206 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269378]
+2022-05-29 10:30:50,206 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,206 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,206 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,206 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269378]
+2022-05-29 10:30:50,206 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,206 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269378]
+2022-05-29 10:30:50,222 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,222 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,222 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,222 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269378]
+2022-05-29 10:30:50,222 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,222 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269378]
+2022-05-29 10:30:50,222 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,222 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,222 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,222 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269378]
+2022-05-29 10:30:50,222 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,222 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269378]
+2022-05-29 10:30:50,222 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,222 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,222 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,222 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269486]
+2022-05-29 10:30:50,222 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,222 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269486]
+2022-05-29 10:30:50,222 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,222 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,222 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,222 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269486]
+2022-05-29 10:30:50,222 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,222 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269486]
+2022-05-29 10:30:50,222 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,222 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,222 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,222 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269486]
+2022-05-29 10:30:50,222 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,222 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269486]
+2022-05-29 10:30:50,222 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,222 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,222 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,222 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269486]
+2022-05-29 10:30:50,238 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,222 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269486]
+2022-05-29 10:30:50,238 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,222 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,238 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,238 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,238 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,238 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,238 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,238 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,238 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,238 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,238 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,238 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,238 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,238 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,238 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,238 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,238 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,238 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,238 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,238 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,238 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,238 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,238 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,238 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,238 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,238 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,238 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,238 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269469]
+2022-05-29 10:30:50,238 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,238 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269469]
+2022-05-29 10:30:50,238 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,238 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,238 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,238 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269469]
+2022-05-29 10:30:50,238 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,238 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269469]
+2022-05-29 10:30:50,238 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,238 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,253 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,253 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,253 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,253 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,253 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,253 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,253 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,253 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,253 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,253 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,253 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,253 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,253 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,253 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,253 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,253 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,253 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,253 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,253 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,253 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,269 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,269 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,269 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,269 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,269 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,269 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269378]
+2022-05-29 10:30:50,269 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,269 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269378]
+2022-05-29 10:30:50,269 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,269 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,269 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,269 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269378]
+2022-05-29 10:30:50,269 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,269 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269378]
+2022-05-29 10:30:50,269 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,269 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,269 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,269 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269378]
+2022-05-29 10:30:50,269 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,269 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269378]
+2022-05-29 10:30:50,269 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,269 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,269 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,269 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269378]
+2022-05-29 10:30:50,269 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,269 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269378]
+2022-05-29 10:30:50,269 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,269 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,269 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,269 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269486]
+2022-05-29 10:30:50,269 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,269 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269486]
+2022-05-29 10:30:50,285 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,285 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,285 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,285 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269486]
+2022-05-29 10:30:50,285 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,285 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269486]
+2022-05-29 10:30:50,285 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,285 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,285 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,285 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269486]
+2022-05-29 10:30:50,285 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,285 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269486]
+2022-05-29 10:30:50,285 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,285 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,285 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,285 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269486]
+2022-05-29 10:30:50,285 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,285 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269486]
+2022-05-29 10:30:50,285 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,285 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,285 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,285 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,285 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,285 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,285 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,285 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,285 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,285 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,285 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,285 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,285 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,285 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,285 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,285 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,285 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,285 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,285 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,285 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,285 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,285 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,285 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,285 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,285 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,285 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,300 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,285 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269469]
+2022-05-29 10:30:50,300 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,285 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269469]
+2022-05-29 10:30:50,300 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,285 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,300 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,285 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269469]
+2022-05-29 10:30:50,300 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,285 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269469]
+2022-05-29 10:30:50,300 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,300 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,300 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,300 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,300 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,300 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,300 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,300 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,300 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,300 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,300 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,300 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,300 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,300 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,300 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,300 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,316 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,300 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,316 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,316 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,316 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,316 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,316 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,316 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,316 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,316 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,316 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,316 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269378]
+2022-05-29 10:30:50,316 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,316 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269378]
+2022-05-29 10:30:50,331 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,331 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,331 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,331 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269378]
+2022-05-29 10:30:50,331 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,331 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269378]
+2022-05-29 10:30:50,331 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,331 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,331 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,331 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269378]
+2022-05-29 10:30:50,331 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,331 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269378]
+2022-05-29 10:30:50,331 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,331 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,331 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,331 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269378]
+2022-05-29 10:30:50,331 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,331 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269378]
+2022-05-29 10:30:50,331 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,331 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,331 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,331 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269486]
+2022-05-29 10:30:50,331 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,331 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269486]
+2022-05-29 10:30:50,331 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,331 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,331 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,331 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269486]
+2022-05-29 10:30:50,331 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,331 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269486]
+2022-05-29 10:30:50,331 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,331 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,331 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,331 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269486]
+2022-05-29 10:30:50,331 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,331 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269486]
+2022-05-29 10:30:50,331 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,331 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,331 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,331 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269486]
+2022-05-29 10:30:50,331 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,331 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269486]
+2022-05-29 10:30:50,331 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,331 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,331 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,331 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,331 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,331 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,331 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,331 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,347 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,347 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,347 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,347 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,347 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,347 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,347 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,347 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,347 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,347 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,347 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,347 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,347 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,347 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,347 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,347 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,347 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,347 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,347 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,347 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269469]
+2022-05-29 10:30:50,347 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,347 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269469]
+2022-05-29 10:30:50,347 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,347 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,347 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,347 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269469]
+2022-05-29 10:30:50,347 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,347 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269469]
+2022-05-29 10:30:50,347 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,347 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,347 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,347 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,347 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,347 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,347 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,347 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,347 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,347 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,347 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,347 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,347 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,347 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,347 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,347 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,347 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,347 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,347 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,347 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,347 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,347 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,347 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,347 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,347 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,347 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,347 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,347 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269378]
+2022-05-29 10:30:50,347 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,347 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269378]
+2022-05-29 10:30:50,347 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,347 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,347 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,347 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269378]
+2022-05-29 10:30:50,347 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,347 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269378]
+2022-05-29 10:30:50,363 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,347 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,363 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,363 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269378]
+2022-05-29 10:30:50,363 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,363 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269378]
+2022-05-29 10:30:50,363 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,363 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,363 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,363 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269378]
+2022-05-29 10:30:50,363 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,363 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269378]
+2022-05-29 10:30:50,363 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,363 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,363 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,363 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269486]
+2022-05-29 10:30:50,363 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,363 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269486]
+2022-05-29 10:30:50,378 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,363 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,378 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,378 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269486]
+2022-05-29 10:30:50,378 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,378 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269486]
+2022-05-29 10:30:50,378 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,378 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,378 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,378 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269486]
+2022-05-29 10:30:50,378 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,378 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269486]
+2022-05-29 10:30:50,378 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,378 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,378 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,378 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269486]
+2022-05-29 10:30:50,378 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,378 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269486]
+2022-05-29 10:30:50,378 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,378 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,378 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,378 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,378 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,378 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,378 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,378 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,378 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,378 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,378 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,378 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,378 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,378 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,378 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,378 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,378 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,378 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,378 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,378 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,378 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,378 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,378 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,378 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,378 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,378 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,378 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,378 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269469]
+2022-05-29 10:30:50,378 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,378 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269469]
+2022-05-29 10:30:50,394 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,394 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,394 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,394 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269469]
+2022-05-29 10:30:50,394 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,394 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269469]
+2022-05-29 10:30:50,394 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,394 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,394 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,394 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,394 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,394 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,394 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,394 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,394 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,394 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,394 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,394 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,394 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,394 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,394 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,394 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,394 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,394 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,394 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,394 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,394 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,394 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,394 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,394 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,394 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,394 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,394 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,394 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269378]
+2022-05-29 10:30:50,394 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,394 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269378]
+2022-05-29 10:30:50,394 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,394 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,394 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,394 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269378]
+2022-05-29 10:30:50,394 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,394 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269378]
+2022-05-29 10:30:50,409 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,409 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,409 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,409 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269378]
+2022-05-29 10:30:50,409 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,409 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269378]
+2022-05-29 10:30:50,409 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,409 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,409 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,409 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269378]
+2022-05-29 10:30:50,409 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,409 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269378]
+2022-05-29 10:30:50,425 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,425 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,425 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,425 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269486]
+2022-05-29 10:30:50,425 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,425 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269486]
+2022-05-29 10:30:50,425 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,425 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,425 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,425 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269486]
+2022-05-29 10:30:50,425 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,425 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269486]
+2022-05-29 10:30:50,425 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,425 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,425 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,425 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269486]
+2022-05-29 10:30:50,425 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,425 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269486]
+2022-05-29 10:30:50,425 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,425 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,441 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,441 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269486]
+2022-05-29 10:30:50,441 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,441 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269486]
+2022-05-29 10:30:50,441 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,441 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,441 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,441 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,441 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,441 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,456 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,456 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,456 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,456 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,456 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,456 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,456 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,456 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,456 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,456 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,456 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,456 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,456 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,456 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,456 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,456 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,456 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,456 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,456 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,456 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,456 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,456 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269469]
+2022-05-29 10:30:50,456 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,456 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269469]
+2022-05-29 10:30:50,456 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,456 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,456 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,456 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269469]
+2022-05-29 10:30:50,456 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,456 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269469]
+2022-05-29 10:30:50,456 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,456 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,456 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,456 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,456 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,456 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,456 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,456 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,456 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,456 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,456 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,456 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,456 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,456 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,456 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,456 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,472 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,456 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,472 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,472 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,472 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,472 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,472 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,472 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,472 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,472 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,472 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,472 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269378]
+2022-05-29 10:30:50,472 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,472 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269378]
+2022-05-29 10:30:50,472 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,472 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,472 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,472 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269378]
+2022-05-29 10:30:50,472 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,472 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269378]
+2022-05-29 10:30:50,472 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,472 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,472 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,472 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269378]
+2022-05-29 10:30:50,472 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,472 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269378]
+2022-05-29 10:30:50,472 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,472 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,472 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,472 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269378]
+2022-05-29 10:30:50,472 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,472 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269378]
+2022-05-29 10:30:50,472 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,472 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,472 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,472 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269486]
+2022-05-29 10:30:50,472 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,472 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269486]
+2022-05-29 10:30:50,472 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,472 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,472 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,472 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269486]
+2022-05-29 10:30:50,472 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,472 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269486]
+2022-05-29 10:30:50,472 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,472 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,472 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,472 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269486]
+2022-05-29 10:30:50,472 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,472 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269486]
+2022-05-29 10:30:50,472 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,472 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,472 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,472 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269486]
+2022-05-29 10:30:50,472 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,472 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269486]
+2022-05-29 10:30:50,472 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,472 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,472 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,472 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,472 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,472 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,472 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,472 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,472 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,472 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,472 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,472 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,472 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,472 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,472 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,472 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,472 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,472 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,472 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,472 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,472 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,472 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,472 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,472 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,472 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,472 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,472 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,472 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269469]
+2022-05-29 10:30:50,472 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,472 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269469]
+2022-05-29 10:30:50,472 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,472 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,488 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,488 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269469]
+2022-05-29 10:30:50,488 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,488 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269469]
+2022-05-29 10:30:50,488 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,488 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,488 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,488 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,488 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,488 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,488 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,488 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,488 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,488 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,488 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,488 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,488 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,488 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,488 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,488 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,488 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,488 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,488 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,488 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,488 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,488 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,488 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,488 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,488 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,488 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,488 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,488 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269378]
+2022-05-29 10:30:50,488 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,488 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269378]
+2022-05-29 10:30:50,488 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,488 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,488 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,488 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269378]
+2022-05-29 10:30:50,488 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,488 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269378]
+2022-05-29 10:30:50,488 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,488 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,488 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,488 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269378]
+2022-05-29 10:30:50,488 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,488 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269378]
+2022-05-29 10:30:50,488 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,488 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,488 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,488 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269378]
+2022-05-29 10:30:50,488 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,488 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269378]
+2022-05-29 10:30:50,488 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,488 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,488 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,488 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269486]
+2022-05-29 10:30:50,488 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,488 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269486]
+2022-05-29 10:30:50,488 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,488 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,488 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,488 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269486]
+2022-05-29 10:30:50,488 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,488 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269486]
+2022-05-29 10:30:50,488 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,488 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,488 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,488 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269486]
+2022-05-29 10:30:50,488 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,488 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269486]
+2022-05-29 10:30:50,488 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,488 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,488 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,488 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269486]
+2022-05-29 10:30:50,488 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,488 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269486]
+2022-05-29 10:30:50,488 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,488 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,488 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,488 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,488 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,488 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,488 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,488 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,488 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,488 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,488 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,488 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,488 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,488 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,488 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,488 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,488 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,488 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,488 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,488 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,488 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,488 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,488 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,488 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,488 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,488 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,503 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,488 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269469]
+2022-05-29 10:30:50,503 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,488 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269469]
+2022-05-29 10:30:50,503 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,488 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,503 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,488 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269469]
+2022-05-29 10:30:50,503 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,488 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269469]
+2022-05-29 10:30:50,503 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,503 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,503 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,503 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,503 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,503 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,503 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,503 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,503 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,503 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,503 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,503 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,503 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,503 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,503 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,503 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,503 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,503 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,503 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,503 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,503 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,503 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,503 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,503 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,503 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,503 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,503 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,503 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269378]
+2022-05-29 10:30:50,503 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,503 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269378]
+2022-05-29 10:30:50,503 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,503 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,503 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,503 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269378]
+2022-05-29 10:30:50,503 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,503 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269378]
+2022-05-29 10:30:50,503 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,503 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,503 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,503 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269378]
+2022-05-29 10:30:50,503 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,503 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269378]
+2022-05-29 10:30:50,503 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,503 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,503 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,503 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269378]
+2022-05-29 10:30:50,503 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,503 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269378]
+2022-05-29 10:30:50,503 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,503 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,503 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,503 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269486]
+2022-05-29 10:30:50,503 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,503 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269486]
+2022-05-29 10:30:50,503 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,503 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,503 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,503 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269486]
+2022-05-29 10:30:50,503 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,503 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269486]
+2022-05-29 10:30:50,503 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,503 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,503 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,503 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269486]
+2022-05-29 10:30:50,503 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,503 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269486]
+2022-05-29 10:30:50,519 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,519 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,519 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,519 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269486]
+2022-05-29 10:30:50,519 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,519 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269486]
+2022-05-29 10:30:50,519 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,519 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,519 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,519 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,519 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,519 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,519 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,519 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,519 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,519 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,519 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,519 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,519 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,519 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,519 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,519 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,519 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,519 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,519 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,519 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,519 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,519 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,519 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,519 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,519 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,519 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,519 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,519 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269469]
+2022-05-29 10:30:50,519 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,519 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269469]
+2022-05-29 10:30:50,519 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,519 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,519 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,519 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269469]
+2022-05-29 10:30:50,519 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,519 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269469]
+2022-05-29 10:30:50,519 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,519 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,519 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,519 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,534 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,519 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,534 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,534 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,534 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,534 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,534 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,534 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,534 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,534 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,534 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,534 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,534 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,534 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,534 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,534 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,534 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,534 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,534 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,534 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,534 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,534 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,534 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,534 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269378]
+2022-05-29 10:30:50,534 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,534 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269378]
+2022-05-29 10:30:50,534 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,534 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,534 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,534 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269378]
+2022-05-29 10:30:50,534 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,534 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269378]
+2022-05-29 10:30:50,534 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,534 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,534 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,534 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269378]
+2022-05-29 10:30:50,534 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,534 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269378]
+2022-05-29 10:30:50,534 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,534 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,534 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,534 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269378]
+2022-05-29 10:30:50,550 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,534 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269378]
+2022-05-29 10:30:50,550 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,534 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,550 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,534 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269486]
+2022-05-29 10:30:50,550 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,550 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269486]
+2022-05-29 10:30:50,550 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,550 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,550 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,550 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269486]
+2022-05-29 10:30:50,550 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,550 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269486]
+2022-05-29 10:30:50,550 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,550 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,550 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,550 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269486]
+2022-05-29 10:30:50,550 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,550 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269486]
+2022-05-29 10:30:50,550 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,550 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,550 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,550 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269486]
+2022-05-29 10:30:50,550 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,550 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269486]
+2022-05-29 10:30:50,550 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,550 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,550 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,550 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,550 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,550 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,550 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,550 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,550 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,550 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,550 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,550 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,550 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,550 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,550 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,550 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,550 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,550 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,550 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,550 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,550 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,550 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,550 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,550 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,550 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,550 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,550 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,550 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269469]
+2022-05-29 10:30:50,550 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,550 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269469]
+2022-05-29 10:30:50,550 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,550 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,550 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,550 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269469]
+2022-05-29 10:30:50,550 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,550 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269469]
+2022-05-29 10:30:50,550 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,550 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1652272269326]
+2022-05-29 10:30:50,706 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,706 [INFO] ThirdParty:899 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AI 7.1.0
+2022-05-29 10:30:50,706 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,706 [INFO] ThirdParty:899 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-GNSS1 5.2.0
+2022-05-29 10:30:50,706 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,706 [INFO] ThirdParty:899 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-BLE1 6.2.3
+2022-05-29 10:30:50,706 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,706 [INFO] ThirdParty:899 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-BLE2 3.2.2
+2022-05-29 10:30:50,706 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,706 [INFO] ThirdParty:899 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-MEMS1 9.2.0
+2022-05-29 10:30:50,706 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,706 [INFO] ThirdParty:899 - CMSIS Pack Vendor :STMicroelectronics FreeRTOS 0.0.1
+2022-05-29 10:30:50,706 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,706 [INFO] ThirdParty:899 - CMSIS Pack Vendor :SEGGER I-CUBE-embOS 1.2.0
+2022-05-29 10:30:50,706 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:50,706 [INFO] ThirdParty:899 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-EEPRMA1 3.1.1
+2022-05-29 10:30:51,316 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:51,316 [INFO] PinOutPanel:1420 - setPackage(No Configuration,No Configuration)
+2022-05-29 10:30:51,316 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:51,316 [INFO] PinOutPanel:1420 - setPackage(STM32F417IGHx,UFBGA176)
+2022-05-29 10:30:52,159 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:52,159 [INFO] UtilMem:74 - Before build in PCC Used Memory: 194463696 Bytes (800587776)
+2022-05-29 10:30:52,768 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:52,768 [INFO] SharedServices:71 - Folder for power plug-in: C:/Users/wbbhi/.stm32cubemx/plugins/power
+2022-05-29 10:30:52,862 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:52,862 [INFO] SharedServices:71 - Folder for power plug-in: C:/Users/wbbhi/.stm32cubemx/plugins/power
+2022-05-29 10:30:52,940 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:52,940 [INFO] SharedServices:71 - Folder for power plug-in: C:/Users/wbbhi/.stm32cubemx/plugins/power
+2022-05-29 10:30:52,956 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:52,956 [INFO] SharedServices:71 - Folder for power plug-in: C:/Users/wbbhi/.stm32cubemx/plugins/power
+2022-05-29 10:30:53,206 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:53,206 [INFO] UtilMem:74 - After build in PCC Used Memory: 259984872 Bytes (800587776)
+2022-05-29 10:30:53,253 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:53,253 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2022-05-29 10:30:53,253 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:53,253 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2022-05-29 10:30:53,253 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:53,253 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2022-05-29 10:30:53,253 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:53,253 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2022-05-29 10:30:53,253 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:53,253 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2022-05-29 10:30:53,253 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:53,253 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2022-05-29 10:30:53,253 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:53,253 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2022-05-29 10:30:53,253 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:53,253 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2022-05-29 10:30:53,253 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:53,253 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2022-05-29 10:30:53,253 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:53,253 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2022-05-29 10:30:53,253 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:53,253 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2022-05-29 10:30:53,268 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:53,268 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2022-05-29 10:30:53,268 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:53,268 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2022-05-29 10:30:53,268 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:53,268 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2022-05-29 10:30:53,268 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:53,268 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2022-05-29 10:30:53,268 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:53,268 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2022-05-29 10:30:53,268 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:53,268 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2022-05-29 10:30:53,268 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:53,268 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2022-05-29 10:30:53,268 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:53,268 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2022-05-29 10:30:53,268 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:53,268 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2022-05-29 10:30:53,268 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:53,268 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2022-05-29 10:30:53,268 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:53,268 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2022-05-29 10:30:53,268 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:53,268 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2022-05-29 10:30:53,268 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:53,268 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2022-05-29 10:30:53,268 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:53,268 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2022-05-29 10:30:53,268 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:53,268 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2022-05-29 10:30:53,268 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:53,268 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2022-05-29 10:30:53,268 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:53,268 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2022-05-29 10:30:53,268 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:53,268 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2022-05-29 10:30:53,268 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:53,268 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2022-05-29 10:30:53,268 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:53,268 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2022-05-29 10:30:53,268 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:53,268 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2022-05-29 10:30:53,268 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:53,268 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2022-05-29 10:30:53,268 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:53,268 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2022-05-29 10:30:53,268 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:53,268 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2022-05-29 10:30:53,268 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:53,268 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2022-05-29 10:30:53,284 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:53,284 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2022-05-29 10:30:53,284 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:53,284 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2022-05-29 10:30:53,284 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:53,284 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2022-05-29 10:30:53,284 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:53,284 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2022-05-29 10:30:53,284 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:53,284 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2022-05-29 10:30:53,284 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:53,284 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2022-05-29 10:30:53,284 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:53,284 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2022-05-29 10:30:53,284 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:53,284 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2022-05-29 10:30:53,284 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:53,284 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2022-05-29 10:30:53,284 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:53,284 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2022-05-29 10:30:53,284 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:53,284 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2022-05-29 10:30:53,284 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:53,284 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2022-05-29 10:30:53,284 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:53,284 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2022-05-29 10:30:53,284 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:53,284 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2022-05-29 10:30:53,284 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:53,284 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2022-05-29 10:30:53,284 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:53,284 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2022-05-29 10:30:53,299 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:53,299 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2022-05-29 10:30:53,299 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:53,299 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2022-05-29 10:30:53,299 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:53,299 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2022-05-29 10:30:53,299 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:53,299 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2022-05-29 10:30:53,299 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:53,299 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2022-05-29 10:30:53,299 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:53,299 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2022-05-29 10:30:53,299 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:53,299 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2022-05-29 10:30:53,299 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:53,299 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2022-05-29 10:30:53,299 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:53,299 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2022-05-29 10:30:53,924 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:53,924 [INFO] OpenFileManager:294 - Restore cursor
+2022-05-29 10:30:54,862 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:54,862 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 723393176 Bytes (800587776)
+2022-05-29 10:30:55,912 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:55,912 [INFO] BlockDiagram:2671 - set Specific Code input for plugin: MotorControl
+2022-05-29 10:30:55,912 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:55,912 [INFO] BlockDiagram:2671 - set Specific Code input for plugin: TIM1_8
+2022-05-29 10:30:55,912 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:55,912 [INFO] BlockDiagram:2671 - set Specific Code input for plugin: ADC
+2022-05-29 10:30:55,912 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:55,912 [INFO] BlockDiagram:2671 - set Specific Code input for plugin: SYS
+2022-05-29 10:30:55,912 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:55,912 [INFO] BlockDiagram:2671 - set Specific Code input for plugin: ADC
+2022-05-29 10:30:55,912 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:55,912 [INFO] BlockDiagram:2671 - set Specific Code input for plugin: RCC
+2022-05-29 10:30:55,912 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:55,912 [INFO] BlockDiagram:2671 - set Specific Code input for plugin: NVIC
+2022-05-29 10:30:55,912 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:55,912 [INFO] BlockDiagram:2671 - set Specific Code input for plugin: USART
+2022-05-29 10:30:55,912 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:55,912 [INFO] BlockDiagram:2671 - set Specific Code input for plugin: DAC
+2022-05-29 10:30:55,912 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:55,912 [INFO] BlockDiagram:2671 - set Specific Code input for plugin: TIM1_8
+2022-05-29 10:30:55,912 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:55,912 [INFO] BlockDiagram:2671 - set Specific Code input for plugin: GPIO
+2022-05-29 10:30:55,912 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:55,912 [INFO] CodeGenerator:603 - code generatio: config db path: D:\Program Files\STMicroelectronics\STM32Cube\STM32CubeMX\\db\
+2022-05-29 10:30:57,209 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:57,209 [INFO] CodeEngine:188 - oldGeneratedFile, D:\examples\YSF4_HAL_MOTOR-654. FOC_v5.2.0_42PMSM_Ecoder\MXTmpFiles\license.tmp_save
+2022-05-29 10:30:57,818 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:57,818 [INFO] CodeEngine:206 - Generated code: D:\examples\YSF4_HAL_MOTOR-654. FOC_v5.2.0_42PMSM_Ecoder\MXTmpFiles\license.tmp
+2022-05-29 10:30:57,974 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:57,974 [INFO] CodeEngine:188 - oldGeneratedFile, D:\examples\YSF4_HAL_MOTOR-654. FOC_v5.2.0_42PMSM_Ecoder\MXTmpFiles\gpio.tmp_save
+2022-05-29 10:30:58,255 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:58,255 [INFO] CodeEngine:206 - Generated code: D:\examples\YSF4_HAL_MOTOR-654. FOC_v5.2.0_42PMSM_Ecoder\MXTmpFiles\gpio.tmp
+2022-05-29 10:30:58,833 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:58,833 [INFO] ApiDbMcu:451 - Load IP Config File for MotorControl
+2022-05-29 10:30:58,880 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:58,880 [INFO] Middleware:1103 - No code input for Bsp Dependency
+2022-05-29 10:30:58,974 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:58,974 [INFO] CodeEngine:188 - oldGeneratedFile, D:\examples\YSF4_HAL_MOTOR-654. FOC_v5.2.0_42PMSM_Ecoder\Src\motorcontrol.c_save
+2022-05-29 10:30:59,177 INFO  [LineInfo_to_exitCode.log_LineInfo] Generated code: D:\examples\YSF4_HAL_MOTOR-654. FOC_v5.2.0_42PMSM_Ecoder\Src\motorcontrol.c
+2022-05-29 10:30:59,193 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:59,193 [INFO] CodeEngine:188 - oldGeneratedFile, D:\examples\YSF4_HAL_MOTOR-654. FOC_v5.2.0_42PMSM_Ecoder\Inc\motorcontrol.h_save
+2022-05-29 10:30:59,365 INFO  [LineInfo_to_exitCode.log_LineInfo] Generated code: D:\examples\YSF4_HAL_MOTOR-654. FOC_v5.2.0_42PMSM_Ecoder\Inc\motorcontrol.h
+2022-05-29 10:30:59,380 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:59,380 [INFO] CodeEngine:188 - oldGeneratedFile, D:\examples\YSF4_HAL_MOTOR-654. FOC_v5.2.0_42PMSM_Ecoder\Inc\drive_parameters.h_save
+2022-05-29 10:30:59,614 INFO  [LineInfo_to_exitCode.log_LineInfo] Generated code: D:\examples\YSF4_HAL_MOTOR-654. FOC_v5.2.0_42PMSM_Ecoder\Inc\drive_parameters.h
+2022-05-29 10:30:59,630 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:59,630 [INFO] CodeEngine:188 - oldGeneratedFile, D:\examples\YSF4_HAL_MOTOR-654. FOC_v5.2.0_42PMSM_Ecoder\Inc\mc_tasks.h_save
+2022-05-29 10:30:59,771 INFO  [LineInfo_to_exitCode.log_LineInfo] Generated code: D:\examples\YSF4_HAL_MOTOR-654. FOC_v5.2.0_42PMSM_Ecoder\Inc\mc_tasks.h
+2022-05-29 10:30:59,786 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:30:59,786 [INFO] CodeEngine:188 - oldGeneratedFile, D:\examples\YSF4_HAL_MOTOR-654. FOC_v5.2.0_42PMSM_Ecoder\Src\mc_api.c_save
+2022-05-29 10:31:00,083 INFO  [LineInfo_to_exitCode.log_LineInfo] Generated code: D:\examples\YSF4_HAL_MOTOR-654. FOC_v5.2.0_42PMSM_Ecoder\Src\mc_api.c
+2022-05-29 10:31:00,114 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:31:00,114 [INFO] CodeEngine:188 - oldGeneratedFile, D:\examples\YSF4_HAL_MOTOR-654. FOC_v5.2.0_42PMSM_Ecoder\Src\motor_control_protocol.c_save
+2022-05-29 10:31:00,364 INFO  [LineInfo_to_exitCode.log_LineInfo] Generated code: D:\examples\YSF4_HAL_MOTOR-654. FOC_v5.2.0_42PMSM_Ecoder\Src\motor_control_protocol.c
+2022-05-29 10:31:00,380 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:31:00,380 [INFO] CodeEngine:188 - oldGeneratedFile, D:\examples\YSF4_HAL_MOTOR-654. FOC_v5.2.0_42PMSM_Ecoder\Inc\mc_api.h_save
+2022-05-29 10:31:00,645 INFO  [LineInfo_to_exitCode.log_LineInfo] Generated code: D:\examples\YSF4_HAL_MOTOR-654. FOC_v5.2.0_42PMSM_Ecoder\Inc\mc_api.h
+2022-05-29 10:31:00,661 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:31:00,661 [INFO] CodeEngine:188 - oldGeneratedFile, D:\examples\YSF4_HAL_MOTOR-654. FOC_v5.2.0_42PMSM_Ecoder\Src\mc_config.c_save
+2022-05-29 10:31:01,098 INFO  [LineInfo_to_exitCode.log_LineInfo] Generated code: D:\examples\YSF4_HAL_MOTOR-654. FOC_v5.2.0_42PMSM_Ecoder\Src\mc_config.c
+2022-05-29 10:31:01,114 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:31:01,114 [INFO] CodeEngine:188 - oldGeneratedFile, D:\examples\YSF4_HAL_MOTOR-654. FOC_v5.2.0_42PMSM_Ecoder\Inc\mc_config.h_save
+2022-05-29 10:31:01,317 INFO  [LineInfo_to_exitCode.log_LineInfo] Generated code: D:\examples\YSF4_HAL_MOTOR-654. FOC_v5.2.0_42PMSM_Ecoder\Inc\mc_config.h
+2022-05-29 10:31:01,333 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:31:01,333 [INFO] CodeEngine:188 - oldGeneratedFile, D:\examples\YSF4_HAL_MOTOR-654. FOC_v5.2.0_42PMSM_Ecoder\Inc\mc_stm_types.h_save
+2022-05-29 10:31:01,583 INFO  [LineInfo_to_exitCode.log_LineInfo] Generated code: D:\examples\YSF4_HAL_MOTOR-654. FOC_v5.2.0_42PMSM_Ecoder\Inc\mc_stm_types.h
+2022-05-29 10:31:01,598 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:31:01,598 [INFO] CodeEngine:188 - oldGeneratedFile, D:\examples\YSF4_HAL_MOTOR-654. FOC_v5.2.0_42PMSM_Ecoder\Src\mc_tasks.c_save
+2022-05-29 10:31:01,942 INFO  [LineInfo_to_exitCode.log_LineInfo] Generated code: D:\examples\YSF4_HAL_MOTOR-654. FOC_v5.2.0_42PMSM_Ecoder\Src\mc_tasks.c
+2022-05-29 10:31:01,973 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:31:01,973 [INFO] CodeEngine:188 - oldGeneratedFile, D:\examples\YSF4_HAL_MOTOR-654. FOC_v5.2.0_42PMSM_Ecoder\Src\regular_conversion_manager.c_save
+2022-05-29 10:31:02,176 INFO  [LineInfo_to_exitCode.log_LineInfo] Generated code: D:\examples\YSF4_HAL_MOTOR-654. FOC_v5.2.0_42PMSM_Ecoder\Src\regular_conversion_manager.c
+2022-05-29 10:31:02,192 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:31:02,192 [INFO] CodeEngine:188 - oldGeneratedFile, D:\examples\YSF4_HAL_MOTOR-654. FOC_v5.2.0_42PMSM_Ecoder\Inc\regular_conversion_manager.h_save
+2022-05-29 10:31:02,348 INFO  [LineInfo_to_exitCode.log_LineInfo] Generated code: D:\examples\YSF4_HAL_MOTOR-654. FOC_v5.2.0_42PMSM_Ecoder\Inc\regular_conversion_manager.h
+2022-05-29 10:31:02,364 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:31:02,364 [INFO] CodeEngine:188 - oldGeneratedFile, D:\examples\YSF4_HAL_MOTOR-654. FOC_v5.2.0_42PMSM_Ecoder\Inc\parameters_conversion.h_save
+2022-05-29 10:31:02,676 INFO  [LineInfo_to_exitCode.log_LineInfo] Generated code: D:\examples\YSF4_HAL_MOTOR-654. FOC_v5.2.0_42PMSM_Ecoder\Inc\parameters_conversion.h
+2022-05-29 10:31:02,707 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:31:02,707 [INFO] CodeEngine:188 - oldGeneratedFile, D:\examples\YSF4_HAL_MOTOR-654. FOC_v5.2.0_42PMSM_Ecoder\Inc\parameters_conversion_f4xx.h_save
+2022-05-29 10:31:02,895 INFO  [LineInfo_to_exitCode.log_LineInfo] Generated code: D:\examples\YSF4_HAL_MOTOR-654. FOC_v5.2.0_42PMSM_Ecoder\Inc\parameters_conversion_f4xx.h
+2022-05-29 10:31:02,911 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:31:02,895 [INFO] CodeEngine:188 - oldGeneratedFile, D:\examples\YSF4_HAL_MOTOR-654. FOC_v5.2.0_42PMSM_Ecoder\Inc\pmsm_motor_parameters.h_save
+2022-05-29 10:31:03,051 INFO  [LineInfo_to_exitCode.log_LineInfo] Generated code: D:\examples\YSF4_HAL_MOTOR-654. FOC_v5.2.0_42PMSM_Ecoder\Inc\pmsm_motor_parameters.h
+2022-05-29 10:31:03,051 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:31:03,051 [INFO] CodeEngine:188 - oldGeneratedFile, D:\examples\YSF4_HAL_MOTOR-654. FOC_v5.2.0_42PMSM_Ecoder\Inc\power_stage_parameters.h_save
+2022-05-29 10:31:03,160 INFO  [LineInfo_to_exitCode.log_LineInfo] Generated code: D:\examples\YSF4_HAL_MOTOR-654. FOC_v5.2.0_42PMSM_Ecoder\Inc\power_stage_parameters.h
+2022-05-29 10:31:03,176 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:31:03,176 [INFO] CodeEngine:188 - oldGeneratedFile, D:\examples\YSF4_HAL_MOTOR-654. FOC_v5.2.0_42PMSM_Ecoder\Src\stm32f4xx_mc_it.c_save
+2022-05-29 10:31:03,285 INFO  [LineInfo_to_exitCode.log_LineInfo] Generated code: D:\examples\YSF4_HAL_MOTOR-654. FOC_v5.2.0_42PMSM_Ecoder\Src\stm32f4xx_mc_it.c
+2022-05-29 10:31:03,301 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:31:03,301 [INFO] CodeEngine:188 - oldGeneratedFile, D:\examples\YSF4_HAL_MOTOR-654. FOC_v5.2.0_42PMSM_Ecoder\Inc\mc_parameters.h_save
+2022-05-29 10:31:03,410 INFO  [LineInfo_to_exitCode.log_LineInfo] Generated code: D:\examples\YSF4_HAL_MOTOR-654. FOC_v5.2.0_42PMSM_Ecoder\Inc\mc_parameters.h
+2022-05-29 10:31:03,442 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:31:03,426 [INFO] CodeEngine:188 - oldGeneratedFile, D:\examples\YSF4_HAL_MOTOR-654. FOC_v5.2.0_42PMSM_Ecoder\Src\mc_parameters.c_save
+2022-05-29 10:31:03,614 INFO  [LineInfo_to_exitCode.log_LineInfo] Generated code: D:\examples\YSF4_HAL_MOTOR-654. FOC_v5.2.0_42PMSM_Ecoder\Src\mc_parameters.c
+2022-05-29 10:31:03,629 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:31:03,629 [INFO] CodeEngine:188 - oldGeneratedFile, D:\examples\YSF4_HAL_MOTOR-654. FOC_v5.2.0_42PMSM_Ecoder\Src\ui_task.c_save
+2022-05-29 10:31:03,723 INFO  [LineInfo_to_exitCode.log_LineInfo] Generated code: D:\examples\YSF4_HAL_MOTOR-654. FOC_v5.2.0_42PMSM_Ecoder\Src\ui_task.c
+2022-05-29 10:31:03,738 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:31:03,738 [INFO] CodeEngine:188 - oldGeneratedFile, D:\examples\YSF4_HAL_MOTOR-654. FOC_v5.2.0_42PMSM_Ecoder\Inc\ui_task.h_save
+2022-05-29 10:31:03,832 INFO  [LineInfo_to_exitCode.log_LineInfo] Generated code: D:\examples\YSF4_HAL_MOTOR-654. FOC_v5.2.0_42PMSM_Ecoder\Inc\ui_task.h
+2022-05-29 10:31:03,832 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:31:03,832 [INFO] CodeEngine:188 - oldGeneratedFile, D:\examples\YSF4_HAL_MOTOR-654. FOC_v5.2.0_42PMSM_Ecoder\Src\user_interface.c_save
+2022-05-29 10:31:03,957 INFO  [LineInfo_to_exitCode.log_LineInfo] Generated code: D:\examples\YSF4_HAL_MOTOR-654. FOC_v5.2.0_42PMSM_Ecoder\Src\user_interface.c
+2022-05-29 10:31:03,973 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:31:03,973 [INFO] CodeEngine:188 - oldGeneratedFile, D:\examples\YSF4_HAL_MOTOR-654. FOC_v5.2.0_42PMSM_Ecoder\Inc\user_interface.h_save
+2022-05-29 10:31:04,113 INFO  [LineInfo_to_exitCode.log_LineInfo] Generated code: D:\examples\YSF4_HAL_MOTOR-654. FOC_v5.2.0_42PMSM_Ecoder\Inc\user_interface.h
+2022-05-29 10:31:04,129 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:31:04,129 [INFO] CodeEngine:188 - oldGeneratedFile, D:\examples\YSF4_HAL_MOTOR-654. FOC_v5.2.0_42PMSM_Ecoder\Src\stm32f4xx_it.c_save
+2022-05-29 10:31:04,270 INFO  [LineInfo_to_exitCode.log_LineInfo] Generated code: D:\examples\YSF4_HAL_MOTOR-654. FOC_v5.2.0_42PMSM_Ecoder\Src\stm32f4xx_it.c
+2022-05-29 10:31:04,285 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:31:04,285 [INFO] CodeEngine:188 - oldGeneratedFile, D:\examples\YSF4_HAL_MOTOR-654. FOC_v5.2.0_42PMSM_Ecoder\Inc\stm32f4xx_it.h_save
+2022-05-29 10:31:04,379 INFO  [LineInfo_to_exitCode.log_LineInfo] Generated code: D:\examples\YSF4_HAL_MOTOR-654. FOC_v5.2.0_42PMSM_Ecoder\Inc\stm32f4xx_it.h
+2022-05-29 10:31:04,395 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:31:04,395 [INFO] CodeEngine:188 - oldGeneratedFile, D:\examples\YSF4_HAL_MOTOR-654. FOC_v5.2.0_42PMSM_Ecoder\Src\stm32f4xx_hal_msp.c_save
+2022-05-29 10:31:04,629 INFO  [LineInfo_to_exitCode.log_LineInfo] Generated code: D:\examples\YSF4_HAL_MOTOR-654. FOC_v5.2.0_42PMSM_Ecoder\Src\stm32f4xx_hal_msp.c
+2022-05-29 10:31:04,645 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:31:04,645 [INFO] CodeEngine:188 - oldGeneratedFile, D:\examples\YSF4_HAL_MOTOR-654. FOC_v5.2.0_42PMSM_Ecoder\MXTmpFiles\system.tmp_save
+2022-05-29 10:31:04,801 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:31:04,801 [INFO] CodeEngine:206 - Generated code: D:\examples\YSF4_HAL_MOTOR-654. FOC_v5.2.0_42PMSM_Ecoder\MXTmpFiles\system.tmp
+2022-05-29 10:31:04,816 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:31:04,816 [INFO] CodeEngine:188 - oldGeneratedFile, D:\examples\YSF4_HAL_MOTOR-654. FOC_v5.2.0_42PMSM_Ecoder\Inc\stm32f4xx_hal_conf.h_save
+2022-05-29 10:31:04,973 INFO  [LineInfo_to_exitCode.log_LineInfo] Generated code: D:\examples\YSF4_HAL_MOTOR-654. FOC_v5.2.0_42PMSM_Ecoder\Inc\stm32f4xx_hal_conf.h
+2022-05-29 10:31:05,035 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:31:05,035 [INFO] CodeEngine:188 - oldGeneratedFile, D:\examples\YSF4_HAL_MOTOR-654. FOC_v5.2.0_42PMSM_Ecoder\Inc\main.h_save
+2022-05-29 10:31:05,207 INFO  [LineInfo_to_exitCode.log_LineInfo] Generated code: D:\examples\YSF4_HAL_MOTOR-654. FOC_v5.2.0_42PMSM_Ecoder\Inc\main.h
+2022-05-29 10:31:05,222 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:31:05,222 [INFO] CodeEngine:188 - oldGeneratedFile, D:\examples\YSF4_HAL_MOTOR-654. FOC_v5.2.0_42PMSM_Ecoder\Src\main.c_save
+2022-05-29 10:31:05,504 INFO  [LineInfo_to_exitCode.log_LineInfo] Generated code: D:\examples\YSF4_HAL_MOTOR-654. FOC_v5.2.0_42PMSM_Ecoder\Src\main.c
+2022-05-29 10:31:06,613 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:31:06,613 [INFO] ProjectBuilder:2002 - Time for Copy HAL[0] : 469mS.
+2022-05-29 10:31:06,628 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:31:06,628 [INFO] ProjectBuilder:2727 - Project Generator version: 3.7.1
+2022-05-29 10:31:07,128 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:31:07,128 [INFO] ConfigFileManager:1066 - The Die is : DIE413
+2022-05-29 10:31:10,424 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:31:10,424 [INFO] ConfigFileManager:1883 - mx.scratch is deleted!
+2022-05-29 10:31:10,424 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:31:10,424 [INFO] ProjectBuilder:2894 - Time for Generating toolchain IDE Files: 3811mS.
+2022-05-29 10:31:12,127 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:31:12,127 [INFO] ProjectBuilder:1878 - Time for Copy CMSIS : 1703mS.
+2022-05-29 10:31:12,690 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2022-05-29 10:31:12,690 [INFO] ProjectBuilder:1878 - Time for Copy CMSIS : 563mS.
+2022-05-29 10:31:34,614 INFO  [Main.lambda$run$0] Code generation completed
+2022-05-29 10:31:34,614 DEBUG [Main.lambda$run$0] System exists with return code 0
