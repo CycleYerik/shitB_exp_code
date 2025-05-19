@@ -839,10 +839,9 @@ interwork --depend="ysf4_hal_motor-654. foc_v5.2.0_42pmsm_ecoder\startup_stm32f
 417xx.d" -o"ysf4_hal_motor-654. foc_v5.2.0_42pmsm_ecoder\startup_stm32f417xx.o"
  -I.\RTE\_YSF4_HAL_MOTOR-654._FOC_v5.2.0_42PMSM_Ecoder -ID:\MDK\ARM\CMSIS\5.8.0
 \CMSIS\Core\Include -ID:\MDK\Keil\STM32F4xx_DFP\2.17.0\Drivers\CMSIS\Device\ST\
-STM32F4xx\Include --predefine="__EVAL SETA 1" --predefine="__MICROLIB SETA 1" -
--predefine="__UVISION_VERSION SETA 536" --predefine="_RTE_ SETA 1" --predefine=
-"STM32F417xx SETA 1" --predefine="_RTE_ SETA 1" --list=startup_stm32f417xx.lst 
-startup_stm32f417xx.s
+STM32F4xx\Include --predefine="__MICROLIB SETA 1" --predefine="__UVISION_VERSIO
+N SETA 536" --predefine="_RTE_ SETA 1" --predefine="STM32F417xx SETA 1" --prede
+fine="_RTE_ SETA 1" --list=startup_stm32f417xx.lst startup_stm32f417xx.s
 
 
 
@@ -1936,4 +1935,4 @@ Symbol: __main
       At line 177 in file startup_stm32f417xx.s
 Comment: __main used once
 2 symbols
-447 symbols in table
+446 symbols in table

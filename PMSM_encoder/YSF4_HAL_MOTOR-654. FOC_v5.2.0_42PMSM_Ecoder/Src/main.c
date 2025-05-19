@@ -26,6 +26,8 @@
 /* USER CODE BEGIN Includes */
 #include <stdlib.h>
 #include <stdio.h>
+#include <math.h>   
+#include <string.h> 
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -38,8 +40,8 @@
 #define ENCODER_RULER_TIM_PERIOD 65535
 #define GO_HOME_SPEED 400
 
-#define delay_time 100
-#define control_delay 100
+#define delay_time 10
+#define control_delay 10
 
 /* USER CODE END PD */
 
@@ -63,6 +65,30 @@ UART_HandleTypeDef huart1;
 
 /* USER CODE BEGIN PV */
 
+// 定义存储与该算法相关变量的结构体
+typedef struct
+{
+    unsigned int t_0; /* t0信号发送器开始工作的时刻, 单位s */
+    unsigned int t_01; /* 从t0到t1的时间间隔, 单位s */
+    float f0; /* 时刻t0对应的频率， 单位hz */
+    float f1; /* 时刻t1对应的频率， 单位hz */
+    float k; /* 指数函数的底数 */
+    float p; /* 系数 p */
+    float A; /* 扫频信号的幅值 */
+} my_sweep_t;
+
+
+typedef struct 
+{
+    uint8_t start_flag;
+    uint8_t frame_len;
+    uint8_t header_check;
+    uint8_t data_buf[12];
+    uint8_t frame_check;
+} frame_matlab_t;
+
+
+
 // 光栅尺溢出记数
 int encoder_ruler_overflow_count = 0;
 
@@ -75,6 +101,20 @@ float left_position = 0, right_position = 0;
 float mid_position = 0;
 
 float limit_position = 2;
+
+int find_home_flag = 0; 
+
+// my_sweep_t sweep;
+
+// sweep = {
+//     .t_0 = 0,
+//     .t_01 = 0,
+//     .f0 = 0,
+//     .f1 = 0,
+//     .k = 0,
+//     .p = 0,
+//     .A = 0
+// };
 
 /* USER CODE END PV */
 
@@ -103,6 +143,14 @@ int fgetc(FILE *f)
     HAL_UART_Receive(&huart5, &ch, 1, 0xffff);
     return ch;
 }
+
+
+int init_my_sweep(my_sweep_t *sweep, unsigned int t_0, unsigned int t_01, float f0, float f1, float A);
+float run_my_sweep(my_sweep_t *sweep, unsigned int t_now);
+uint8_t get_uint8_sum_check(uint8_t *data, int len);
+void  send_data_2_matlab(float data1, float data2, float data3);
+void function_sweep_identification(void);
+
 
 float Get_Encoder_Ruler_Count(void);
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim);
@@ -167,6 +215,19 @@ __HAL_TIM_CLEAR_IT(&htim3, TIM_IT_UPDATE);
 __HAL_TIM_URS_ENABLE(&htim3);      
 __HAL_TIM_ENABLE_IT(&htim3,TIM_IT_UPDATE); 
 
+    // //先回零
+    // while(find_home_flag != 1)
+    // {
+    //     my_motor_control();
+    //     HAL_Delay(100);
+    // }
+
+    // //扫频
+    // HAL_Delay(1000);
+    // MC_StartMotor1();
+    find_home_flag = 1;
+
+
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -179,9 +240,10 @@ __HAL_TIM_ENABLE_IT(&htim3,TIM_IT_UPDATE);
 
 
     //对电机进行控制
-    my_motor_control();
 
-    HAL_Delay(100);
+
+    function_sweep_identification();
+    // HAL_Delay(10);
 
   }
   /* USER CODE END 3 */
@@ -797,7 +859,7 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
     if(GPIO_Pin == GoHome_Pin)
     {
         printf("handle_gohome_test: start\n");
-        if(HAL_GPIO_ReadPin(GoHome_GPIO_Port,GoHome_Pin) == GPIO_PIN_RESET)
+        if(HAL_GPIO_ReadPin(GoHome_GPIO_Port,GoHome_Pin) == GPIO_PIN_RESET && start_status == 0)
         {
             int16_t  hFinalSpeed = GO_HOME_SPEED/6;
             uint16_t hDurationms = 0;
@@ -831,6 +893,7 @@ float Get_Encoder_Ruler_Count(void)
     return ruler_pos;
 }
 
+// 电机回零函数
 void my_motor_control(void)
 {
     
@@ -883,6 +946,7 @@ void my_motor_control(void)
         {
             MC_StopMotor1();
             start_status = 4;
+            find_home_flag = 1;
         }
         else if( now_position < mid_position)
         {
@@ -908,6 +972,8 @@ void my_motor_control(void)
     }
 }
 
+/// @brief 暂时废弃，等待完善
+/// @param  
 void back_zero_function(void)
 {
     if(abs(now_position - mid_position) < limit_position)
@@ -928,6 +994,157 @@ void back_zero_function(void)
     }
 }
 
+
+// 初始化函数，用于设置扫频信号的一些配置信息
+/*
+函数：init_my_sweep
+功能：初始化一个频率随着时间指数增加的正弦扫频信号的结构体
+输入：unsigned int t_0 t0信号发送器开始工作的时刻, 单位ms
+输入：unsigned int t_01 从t0到t1的时间间隔, 单位ms
+输入：float f0 时刻t0对应的频率， 单位hz
+输入：float f1 时刻t1对应的频率， 单位hz
+输入：float A 扫频信号的幅值
+输出：int 0 = 成功， 其他表示异常
+*/
+int init_my_sweep(my_sweep_t *sweep, unsigned int t_0, unsigned int t_01, float f0, float f1, float A)
+{
+    if ((t_01 == 0) || (f0 <= 0.0f) || (f1 <= 0.0f) || (f0 == f1) || (A == 0) || (!sweep))
+    {
+        return -1; /*非法入参*/
+    }
+
+    sweep->t_0 = t_0;
+    sweep->t_01 = t_01;
+    sweep->f0 = f0;
+    sweep->f1 = f1;
+    sweep->A = A;
+
+    /* start add code here */
+    // sweep->k = /*计算指数函数的底数k，注意时间的单位要转换为秒*/
+    // sweep->p = /*计算系数p, 注意单位转换*/
+
+    sweep->k = exp(1/(0.001*t_01)*log(f1/f0));
+    sweep->p = 2* 3.14159265 * f0 /(log(sweep->k));
+
+    /* end add code here */
+
+    return 0;
+}
+
+// 获取正弦扫频信号的函数
+/*
+函数：run_my_sweep
+功能：根据当前时间输出频率随着时间指数增加的正弦扫频信号
+输入：sweep 信号发生器结构体指针
+输入：unsigned int t_now 当前时间 单位ms
+输出：float 扫频信号
+*/
+float run_my_sweep(my_sweep_t *sweep, unsigned int t_now)
+{
+    float t = 0.0f; //相对时间 t
+    float y = 0.0f; //扫频信号
+
+    if (!sweep)
+    {
+        return 0.0f; /*非法入参*/
+    }
+
+    if (t_now < sweep->t_0)
+    {
+        return 0.0f; /*时间还未得到*/
+    }
+
+    t = (t_now - sweep->t_0) % sweep->t_01;
+    t = t * 0.001f;
+    y = sweep->A * sin(sweep->p*(pow(sweep->k,t)-1));
+
+    // 此处代码还需根据具体公式补充计算 t 和 y 的逻辑
+    return y;
+}
+
+/* 对 uint8_t 数值进行求和 ,获得这组数据一个uint8_t特征*/
+uint8_t get_uint8_sum_check(uint8_t *data, int len)
+{
+    int i = 0;
+    uint8_t sum = 0;
+    for (i = 0; i < len; i++)
+    {
+        sum += data[i];
+    }
+    return sum;
+}
+
+/*
+函数：send_data_2_matlab
+功能：往matlab发送三个浮点数
+输入：三个浮点数
+输出：无
+*/
+void  send_data_2_matlab(float data1, float data2, float data3)
+{
+    frame_matlab_t  frame = {0};
+    int i = 0;
+
+    /*填充帧头*/
+    frame.start_flag = 0xAA;
+    frame.frame_len  = sizeof(frame);
+    frame.header_check = get_uint8_sum_check((uint8_t *)&frame, 2);
+    /*填充数据*/
+    memcpy((uint8_t *)&frame.data_buf[0], (uint8_t *)&data1, 4);
+    memcpy((uint8_t *)&frame.data_buf[4], (uint8_t *)&data2, 4);
+    // 原代码未完整展示填充 data3 的部分，补充如下
+    memcpy((uint8_t *)&frame.data_buf[8], (uint8_t *)&data3, 4);
+    frame.frame_check = get_uint8_sum_check((uint8_t *)&frame, sizeof(frame));
+    // 原代码未展示发送数据的部分，假设使用 HAL_UART_Transmit 函数发送
+    HAL_UART_Transmit(&huart1, (uint8_t *)&frame, sizeof(frame), HAL_MAX_DELAY); //!!!!! 串口1？
+}
+
+//*实现扫频辨识功能，该功能将被放置在main函数的while(1)中运行*/
+void function_sweep_identification(void)
+{
+    static my_sweep_t sweep = {0};
+    int16_t sweep_input = 0;
+    int16_t sweep_output = 0;
+    uint32_t sys_tick = 0;
+    static uint32_t init_flag = 0;
+    static uint32_t last_sys_tick = 0;
+    static uint32_t start_sys_tick = 0;
+    // 频率在10s内，从0.5hz变化到10hz，幅度为1500digitcurrent
+    uint32_t t_period_ms = 10 * 1000; // 10s
+    float f0 = 0.5;
+    float f1 = 10;
+    float Amp = 1700.0f;
+    float time = 0.0f;
+    sys_tick = HAL_GetTick(); // 获取当前时刻，单位ms
+    time = 0.001f * sys_tick; // 单位s
+    /*进入的条件时回零成功，且按了K1运行键,就开始执行扫频辨识过程,
+   注意find_home_flag是回零成功的标志位，是一个全局变量,需要在外部实现这个标志位*/
+    if ((find_home_flag == 1) && (MC_GetSTMStateMotor1() == RUN))
+    {
+        if (last_sys_tick != sys_tick) // 如果当前时刻发生了变化，这个条件每ms都会成立一次
+        {
+            last_sys_tick = sys_tick;
+            if (sys_tick % 10 == 0) // 通过%把频率从1000hz降低到100hz，即每10ms发生一次
+            {
+                // 初始化扫频配置
+                if (init_flag == 0)
+                {
+                    init_my_sweep(&sweep, sys_tick, t_period_ms, f0, f1, Amp);
+                    printf("sweep-init:k=%.5f,p=%.5f\r\n", (float)sweep.k, (float)sweep.p);
+                    init_flag = 1;
+                }
+                // 获取正弦扫频信号
+                sweep_input = (int16_t)run_my_sweep(&sweep, sys_tick);
+                // 将正弦扫频信号输入到STMCSDK的力矩控制API中
+                MC_ProgramTorqueRampMotor1(sweep_input, 0);
+                // 获取丝杆的转速信息，单位为0.1hz
+                sweep_output = MC_GetMecSpeedAverageMotor1();
+                // 把时间，input, output 发送到 matlab
+                send_data_2_matlab(time, (float)sweep_input, (float)sweep_output);
+            }
+        }
+    }
+}
 
 /* USER CODE END 4 */
 

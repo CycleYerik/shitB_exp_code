@@ -61,3 +61,5 @@ ysf4_hal_motor-654. foc_v5.2.0_42pmsm_ecoder\main.o: ../MCSDK_v5.2.0-Full/MotorC
 ysf4_hal_motor-654. foc_v5.2.0_42pmsm_ecoder\main.o: ../MCSDK_v5.2.0-Full/MotorControl/MCSDK/MCLib/Any/Inc/speed_pos_fdbk.h
 ysf4_hal_motor-654. foc_v5.2.0_42pmsm_ecoder\main.o: D:\MDK\ARM\ARMCC\Bin\..\include\stdlib.h
 ysf4_hal_motor-654. foc_v5.2.0_42pmsm_ecoder\main.o: D:\MDK\ARM\ARMCC\Bin\..\include\stdio.h
+ysf4_hal_motor-654. foc_v5.2.0_42pmsm_ecoder\main.o: D:\MDK\ARM\ARMCC\Bin\..\include\math.h
+ysf4_hal_motor-654. foc_v5.2.0_42pmsm_ecoder\main.o: D:\MDK\ARM\ARMCC\Bin\..\include\string.h
