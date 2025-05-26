@@ -41,7 +41,7 @@
 #define GO_HOME_SPEED 400
 
 #define delay_time 10
-#define control_delay 10
+// #define control_delay 1
 
 /* USER CODE END PD */
 
@@ -104,6 +104,9 @@ float limit_position = 2;
 
 int find_home_flag = 0; 
 
+int function_mode = 1; // 1为阶跃测试，2为扫频测试
+int function_start = 0;
+
 // my_sweep_t sweep;
 
 // sweep = {
@@ -115,6 +118,17 @@ int find_home_flag = 0;
 //     .p = 0,
 //     .A = 0
 // };
+
+volatile uint8_t step_init_flag = 0;      // 阶跃测试初始化标志
+volatile uint8_t chirp_init_flag = 0;     // 扫频测试初始化标志
+volatile float error = 0.0f;              // 当前误差
+volatile float last_error = 0.0f;         // 上一次误差
+volatile float control = 0.0f;            // 控制量
+volatile float last_control = 0.0f;       // 上一次控制量
+volatile int16_t control_int = 0;         // 控制量整型值
+volatile float pos = 0.0f;                // 当前位置
+volatile float ref = 0.0f;                // 目标位置
+volatile uint8_t test_mode = 1;           // 测试模式（0:无测试，1:阶跃测试，2:扫频测试）
 
 /* USER CODE END PV */
 
@@ -155,6 +169,9 @@ void function_sweep_identification(void);
 float Get_Encoder_Ruler_Count(void);
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim);
 void my_motor_control(void);
+
+void function_step_test(void);
+void function_sweep_follow_test(void);
 
 /* USER CODE END PFP */
 
@@ -215,18 +232,32 @@ __HAL_TIM_CLEAR_IT(&htim3, TIM_IT_UPDATE);
 __HAL_TIM_URS_ENABLE(&htim3);      
 __HAL_TIM_ENABLE_IT(&htim3,TIM_IT_UPDATE); 
 
-    // //先回零
+// MC_StartMotor1();
+HAL_Delay(1000);
+
+    //先回零
     // while(find_home_flag != 1)
     // {
     //     my_motor_control();
     //     HAL_Delay(100);
     // }
+    MC_StartMotor1();
+    MC_ProgramSpeedRampMotor1(0,0); //! 一定要加才能启动运行
 
     // //扫频
     // HAL_Delay(1000);
     // MC_StartMotor1();
+    HAL_Delay(1000);
     find_home_flag = 1;
-
+    // start_status = 1;
+    // while(1)
+    // {
+    //     HAL_Delay(100);
+    // }
+    while(function_start != 1)
+    {
+        HAL_Delay(100);
+    }
 
   /* USER CODE END 2 */
 
@@ -242,8 +273,19 @@ __HAL_TIM_ENABLE_IT(&htim3,TIM_IT_UPDATE);
     //对电机进行控制
 
 
-    function_sweep_identification();
-    // HAL_Delay(10);
+    switch(function_mode)
+    {
+        case 1: //阶跃测试
+            function_step_test();
+            break;
+        case 2: //扫频测试
+            function_sweep_follow_test();
+            break;
+        default:
+            break;
+    }
+    
+    // function_sweep_follow_test();
 
   }
   /* USER CODE END 3 */
@@ -853,7 +895,8 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
     }
 }
 
-// GPIO中断
+/// @brief GPIO中断回调函数,按下按键后触发回零
+/// @param GPIO_Pin 
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 {
     if(GPIO_Pin == GoHome_Pin)
@@ -863,17 +906,17 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
         {
             int16_t  hFinalSpeed = GO_HOME_SPEED/6;
             uint16_t hDurationms = 0;
-            MC_ProgramSpeedRampMotor1(hFinalSpeed,hDurationms);
-            MC_StartMotor1();
 
-            //
+            function_start = 1; //开始进行step或者辨识
             start_status = 1;	
         }
     }				
 }
 
 
-// 计算光栅尺位置的代码
+/// @brief 获取光栅尺位置的代码
+/// @param  
+/// @return 光栅尺位置，单位mm
 float Get_Encoder_Ruler_Count(void)
 {
     int32_t CaptureNumber = 0;
@@ -882,55 +925,45 @@ float Get_Encoder_Ruler_Count(void)
     uint32_t Value = __HAL_TIM_GET_COUNTER(&htim3);
     int32_t Period = ENCODER_RULER_TIM_PERIOD + 1;
 
-
-    
     CaptureNumber =  Value + encoder_ruler_overflow_count * Period;
-
-    
-    
     ruler_pos = (float)(CaptureNumber* 0.005f); //mm
     // printf("%ld,%ld,%ld,%f  end \n",Value,Period,CaptureNumber,ruler_pos);
     return ruler_pos;
 }
 
-// 电机回零函数
+/// @brief 电机回零控制函数
+/// @param  
 void my_motor_control(void)
 {
     
     now_position = Get_Encoder_Ruler_Count();
     printf("now: %.2f , mid: %f  \n",now_position,mid_position);
 
-    if(start_status == 0)
+    if(start_status == 0) //不进行任何操作，等待按键GPIO中断触发，触发后start_status = 1,开始向左运动
     {
-
+       
     }
 
-    else if( start_status == 1)
+    else if( start_status == 1) //正在向左运动，直到到达左限位
     {
-        //向左运动，设置速度时间，启动
-
-        //读取PG1 的电平
-        if(HAL_GPIO_ReadPin(LIM_P_GPIO_Port,LIM_P_Pin) == GPIO_PIN_RESET)
+        if(HAL_GPIO_ReadPin(LIM_P_GPIO_Port,LIM_P_Pin) == GPIO_PIN_RESET) //到达左限位，触发GPIO中断
         {
             left_position = now_position;
-            start_status = 2;
+            start_status = 2; //切换状态，开始向右运动
             int16_t  hFinalSpeed = -GO_HOME_SPEED/6;
             uint16_t hDurationms = 0;
             MC_ProgramSpeedRampMotor1(hFinalSpeed,hDurationms);
             HAL_Delay(delay_time);
         }
-    
     }
 
-    else if( start_status == 2)
+    else if( start_status == 2) //正在向右运动，直到到达右限位
     {
-        //向右运动，设置速度时间，启动
-        if(HAL_GPIO_ReadPin(LIM_N_GPIO_Port,LIM_N_Pin) == GPIO_PIN_RESET)
+        if(HAL_GPIO_ReadPin(LIM_N_GPIO_Port,LIM_N_Pin) == GPIO_PIN_RESET) //到达右限位，触发GPIO中断
         {
             right_position = now_position;
-            mid_position = left_position - (left_position - right_position) /2;
-            //!!!!!!!!!!!!!!!!!!!
-            start_status = 3;
+            mid_position = left_position - (left_position - right_position) /2; //计算中点位置
+            start_status = 3; //切换状态，开始回零
             int16_t  hFinalSpeed = GO_HOME_SPEED/6;
             uint16_t hDurationms = 0;
             MC_ProgramSpeedRampMotor1(hFinalSpeed,hDurationms);
@@ -939,12 +972,12 @@ void my_motor_control(void)
 
     }
 
-    else if( start_status == 3)
+    else if( start_status == 3) //正在回零
     {
-        //根据现在位置进行回零控制
+        //根据现在位置进行回零控制，在中点左侧则向右运动，在中点右侧则向左运动，在中点附近误差允许范围内则停止
         if(abs(now_position - mid_position) < limit_position)
         {
-            MC_StopMotor1();
+            MC_ProgramSpeedRampMotor1(0,0);
             start_status = 4;
             find_home_flag = 1;
         }
@@ -962,13 +995,7 @@ void my_motor_control(void)
         }
         HAL_Delay(delay_time);
 
-        // printf("now:%f,mid:%f \n",now_position,mid_position);
-
-        // int16_t  hFinalSpeed = -GO_HOME_SPEED/6;
-        // uint16_t hDurationms = 100;
-        // MC_ProgramSpeedRampMotor1(hFinalSpeed,hDurationms);
-
-        // HAL_Delay(control_delay);
+        // printf("now:%f,mid:%f \n",now_position,mid_position); //调试用的输出
     }
 }
 
@@ -995,17 +1022,15 @@ void back_zero_function(void)
 }
 
 
-// 初始化函数，用于设置扫频信号的一些配置信息
-/*
-函数：init_my_sweep
-功能：初始化一个频率随着时间指数增加的正弦扫频信号的结构体
-输入：unsigned int t_0 t0信号发送器开始工作的时刻, 单位ms
-输入：unsigned int t_01 从t0到t1的时间间隔, 单位ms
-输入：float f0 时刻t0对应的频率， 单位hz
-输入：float f1 时刻t1对应的频率， 单位hz
-输入：float A 扫频信号的幅值
-输出：int 0 = 成功， 其他表示异常
-*/
+
+/// @brief 扫频信号初始化函数
+/// @param sweep 结构体，用于存储扫频信号的配置信息
+/// @param t_0 信号发送器开始工作的时刻, 单位ms
+/// @param t_01 从t0到t1的时间间隔, 单位ms
+/// @param f0 时刻t0对应的频率， 单位hz
+/// @param f1 时刻t1对应的频率， 单位hz
+/// @param A 扫频信号的幅值
+/// @return 0 = 成功， 其他表示异常
 int init_my_sweep(my_sweep_t *sweep, unsigned int t_0, unsigned int t_01, float f0, float f1, float A)
 {
     if ((t_01 == 0) || (f0 <= 0.0f) || (f1 <= 0.0f) || (f0 == f1) || (A == 0) || (!sweep))
@@ -1019,46 +1044,34 @@ int init_my_sweep(my_sweep_t *sweep, unsigned int t_0, unsigned int t_01, float 
     sweep->f1 = f1;
     sweep->A = A;
 
-    /* start add code here */
-    // sweep->k = /*计算指数函数的底数k，注意时间的单位要转换为秒*/
-    // sweep->p = /*计算系数p, 注意单位转换*/
-
-    sweep->k = exp(1/(0.001*t_01)*log(f1/f0));
+    sweep->k = exp(1/(0.001*t_01)*log(f1/f0)); // 时间单位换算为秒
     sweep->p = 2* 3.14159265 * f0 /(log(sweep->k));
-
-    /* end add code here */
 
     return 0;
 }
 
-// 获取正弦扫频信号的函数
-/*
-函数：run_my_sweep
-功能：根据当前时间输出频率随着时间指数增加的正弦扫频信号
-输入：sweep 信号发生器结构体指针
-输入：unsigned int t_now 当前时间 单位ms
-输出：float 扫频信号
-*/
+/// @brief 获取正弦扫频信号的函数
+/// @param sweep 信号发生器结构体指针
+/// @param t_now 当前时间 单位ms
+/// @return 扫频信号
 float run_my_sweep(my_sweep_t *sweep, unsigned int t_now)
 {
     float t = 0.0f; //相对时间 t
     float y = 0.0f; //扫频信号
 
-    if (!sweep)
-    {
-        return 0.0f; /*非法入参*/
-    }
+    // if (!sweep)
+    // {
+    //     return 0.0f; /*非法入参*/
+    // }
 
-    if (t_now < sweep->t_0)
-    {
-        return 0.0f; /*时间还未得到*/
-    }
+    // if (t_now < sweep->t_0)
+    // {
+    //     return 0.0f; /*时间还未得到*/
+    // }
 
-    t = (t_now - sweep->t_0) % sweep->t_01;
-    t = t * 0.001f;
-    y = sweep->A * sin(sweep->p*(pow(sweep->k,t)-1));
+    t = (t_now - sweep->t_0) * 0.001f;  // 转换为秒
+    y = sweep->A * sin(2.0f * 3.14159265f * t);  // 2π * 1Hz * t
 
-    // 此处代码还需根据具体公式补充计算 t 和 y 的逻辑
     return y;
 }
 
@@ -1099,7 +1112,8 @@ void  send_data_2_matlab(float data1, float data2, float data3)
     HAL_UART_Transmit(&huart1, (uint8_t *)&frame, sizeof(frame), HAL_MAX_DELAY); //!!!!! 串口1？
 }
 
-//*实现扫频辨识功能，该功能将被放置在main函数的while(1)中运行*/
+/// @brief 扫频辨识功能
+/// @param  
 void function_sweep_identification(void)
 {
     static my_sweep_t sweep = {0};
@@ -1117,8 +1131,6 @@ void function_sweep_identification(void)
     float time = 0.0f;
     sys_tick = HAL_GetTick(); // 获取当前时刻，单位ms
     time = 0.001f * sys_tick; // 单位s
-    /*进入的条件时回零成功，且按了K1运行键,就开始执行扫频辨识过程,
-   注意find_home_flag是回零成功的标志位，是一个全局变量,需要在外部实现这个标志位*/
     if ((find_home_flag == 1) && (MC_GetSTMStateMotor1() == RUN))
     {
         if (last_sys_tick != sys_tick) // 如果当前时刻发生了变化，这个条件每ms都会成立一次
@@ -1145,6 +1157,216 @@ void function_sweep_identification(void)
         }
     }
 }
+
+
+/// @brief 阶跃测试函数
+/// @param  
+void function_step_test(void)
+{
+    // 静态变量用于保持状态
+    static float u_prev = 0.0f;        // 上一次控制输出
+    static float e_prev = 0.0f;        // 上一次误差
+    static uint8_t step_init_flag = 0; // 阶跃是否已初始化
+    static float ref = 0.0f;           // 参考值（目标位置）
+    static uint32_t last_tick = 0;     // 上一次控制时间戳
+    static uint32_t tick_start = 0;    // 控制器开始运行的时间戳
+
+    float fdk = 0.0f;                  // 当前实际位置
+    float e = 0.0f;                    // 当前误差
+    float u = 0.0f;                    // 控制输出（浮点数）
+    const float Amp = 20.0f;           // 阶跃幅值
+    const uint32_t control_delay = 10; // 控制周期（单位ms）
+
+    uint32_t current_tick = HAL_GetTick();
+    float time = 0.0f;                 // 当前控制时间，单位s
+
+    if(function_start == 0)
+    {
+        return;
+    }
+
+    // 控制器初始化（只在第一次调用，且已归位时触发）
+    if (step_init_flag == 0 && find_home_flag == 1)
+    {
+        fdk = Get_Encoder_Ruler_Count();  // 读取当前位置
+        ref = fdk + Amp;                  // 设置目标值
+        u_prev = 0.0f;
+        e_prev = 0.0f;
+        last_tick = current_tick;
+        tick_start = current_tick;
+        step_init_flag = 1;
+    }
+
+    // 控制逻辑运行条件
+    if (step_init_flag == 1 && find_home_flag == 1)
+    {
+        // 改为基于时间间隔判断，而非取模（更可靠）
+        if ((current_tick - last_tick) >= control_delay)
+        {
+            last_tick = current_tick;
+            time = 0.001f * (current_tick - tick_start);  // 以控制启动为时间零点
+
+            // 获取当前反馈值
+            fdk = Get_Encoder_Ruler_Count();
+            // 可选：对fdk进行滤波（如使用滑动平均等）以提高稳定性
+
+            // 计算误差
+            e = ref - fdk;
+
+            // 离散控制器实现（例如：某种PD控制器离散化）
+            // 控制器公式：u[k] = a * u[k-1] + b * e[k] + c * e[k-1]
+            // 系数可能来源于 Tustin 或其他离散化方法
+            u = 0.3679f * u_prev + 1200.0f * e - 883.9f * e_prev;
+
+            // 更新状态
+            u_prev = u;
+            e_prev = e;
+
+            // 先限幅，再做类型转换
+            if (u > 4997.0f)
+                u = 4997.0f;
+            else if (u < -4997.0f)
+                u = -4997.0f;
+
+            int16_t output = (int16_t)u;
+
+            // 输出控制指令（扭矩模式）
+            MC_ProgramTorqueRampMotor1(output, 0);
+            // MC_ProgramSpeedRampMotor1(500, 0); // 如使用速度控制可启用
+
+
+            // 可选：将数据发送到MATLAB等上位机分析
+            send_data_2_matlab(time, ref,fdk);
+        }
+    }
+    else
+    {
+
+    }
+}
+
+// // 阶跃响应测试函数
+// void function_step_test(void)
+// {
+//     static uint32_t last_sys_tick = 0;
+//     static float ini_pos = 0.0f;
+//     uint32_t sys_tick = HAL_GetTick();
+    
+//     if (sys_tick % 10 == 0 && last_sys_tick != sys_tick)
+//     {
+//         last_sys_tick = sys_tick;
+        
+//         // 初始化阶跃目标
+//         if (step_init_flag == 0)
+//         {
+//             ini_pos = Get_Encoder_Ruler_Count();
+//             ref = ini_pos + 20.0f;
+//             step_init_flag = 1;
+//         }
+        
+//         // 控制逻辑
+//         pos = Get_Encoder_Ruler_Count();
+//         error = ref - pos;
+//         control = 2662 * error - 1968 * last_error + 0.2497 * last_control;
+//         // send_data_2_matlab(0.001*sys_tick, ref, pos);
+        
+//         // 更新历史值
+//         last_control = control;
+//         last_error = error;
+//         control_int = (int16_t)control;
+        
+//         // 输出限幅
+//         control_int = (control_int > 4997) ? 4997 : (control_int < -4997) ? -4997 : control_int;
+//         MC_ProgramTorqueRampMotor1(control_int, 0);
+//    }
+// }
+
+
+/// @brief 扫频跟随测试函数
+/// @param  
+void function_sweep_follow_test(void)
+{
+    /*1.定义局部变量和静态变量*/
+    static uint8_t sweep_init_flag = 0;
+    static float u_prev = 0.0f;
+    static float e_prev = 0.0f;
+    static uint32_t last_tick = 0;
+    static my_sweep_t sweep_param;
+    float ref = 0.0f;
+    float fdk = 0.0f;
+    float e = 0.0f;
+    float u = 0.0f;
+    uint32_t current_tick = 0;
+    const uint32_t control_delay = 10; 
+    static float start_tick = 0;
+    static float origin_position = 0;
+
+    /*2.初始化你的控制器*/
+    // 控制器参数已在静态变量初始化
+
+    /*3.初始化你的正弦信号发生器为 幅值20mm, 频率1Hz*/
+    if (sweep_init_flag == 0)
+    {
+        // 使用init_my_sweep函数初始化扫频参数
+        // if (init_my_sweep(&sweep_param, 
+        //                   HAL_GetTick(),    // t_0: 当前时刻开始
+        //                   1000,            // t_01: 10s (这个参数在1Hz信号中不会被使用)
+        //                   1.0f,             // f0: 1Hz
+        //                   1.0f,             // f1: 1Hz (保持与f0相同，因为我们要固定频率)
+        //                   20.0f) == 0)      // A: 20mm
+        // {
+            u_prev = 0.0f;
+            e_prev = 0.0f;
+        last_tick = HAL_GetTick();
+        sweep_init_flag = 1;
+        start_tick = last_tick;
+        origin_position = Get_Encoder_Ruler_Count();
+            printf("Sweep initialized successfully\n");
+        // }
+        // else
+        // {
+        //     printf("Sweep initialization failed\n");
+        //     return;
+        // }
+    }
+
+    /*4.启动扫频测试功能条件满足*/
+    if ((find_home_flag == 1) && sweep_init_flag == 1)
+    {
+        current_tick = HAL_GetTick();
+        if (current_tick - last_tick >= control_delay) // 5.分频器确定当前tick为控制器运行的tick
+        {
+            last_tick = current_tick;
+
+            /*6.获取光栅尺的当前位置 fdk (mm)*/
+            fdk = Get_Encoder_Ruler_Count();
+
+            /*7.使用run_my_sweep获取最新的正弦信号输出，作为当前参考值*/
+            // ref = run_my_sweep(&sweep_param, current_tick);
+            float t = 0.001f*(current_tick - start_tick);
+            ref = origin_position + 20.0f* sin (2.0f * 3.14159265f * t);
+
+            /*8.将ref作为你的位置控制器的输入命令，调用控制器*/
+            e = ref - fdk;
+            u = 0.3679f * u_prev + 1200.0f * e - 883.9f * e_prev;
+
+            u_prev = u;
+            e_prev = e;
+
+            // 限幅
+            if (u > 4997)
+                u = 4997;
+            else if (u < -4997)
+                u = -4997;
+
+            MC_ProgramTorqueRampMotor1((int16_t)u, 0);
+
+            /*9.使用 send_data_2_matlab, 把时间，ref, fdk发送到matlab进行显示*/
+            send_data_2_matlab((float)(current_tick-start_tick) * 0.001f, ref, fdk);
+        }
+    }
+}
+
 
 /* USER CODE END 4 */
 
