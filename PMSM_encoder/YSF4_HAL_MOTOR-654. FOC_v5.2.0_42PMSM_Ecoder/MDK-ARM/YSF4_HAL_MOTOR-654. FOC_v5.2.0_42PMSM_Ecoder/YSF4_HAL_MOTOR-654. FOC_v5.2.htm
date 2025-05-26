@@ -3,9 +3,9 @@
 <title>Static Call Graph - [YSF4_HAL_MOTOR-654. FOC_v5.2.0_42PMSM_Ecoder\YSF4_HAL_MOTOR-654. FOC_v5.2.0_42PMSM_Ecoder]</title></head>
 <body><HR>
 <H1>Static Call Graph for image YSF4_HAL_MOTOR-654. FOC_v5.2.0_42PMSM_Ecoder\YSF4_HAL_MOTOR-654. FOC_v5.2.0_42PMSM_Ecoder</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060960: Last Updated: Mon May 26 19:37:24 2025
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060960: Last Updated: Mon May 26 21:12:44 2025
 <BR><P>
-<H3>Maximum Stack Usage =        288 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
+<H3>Maximum Stack Usage =        296 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
 main &rArr; function_sweep_follow_test &rArr; __hardfp_sin &rArr; __ieee754_rem_pio2 &rArr; __aeabi_dmul &rArr; _double_epilogue &rArr; _double_round
 <P>
@@ -2445,8 +2445,7 @@ Global Symbols
 <P><STRONG><a name="[c1]"></a>__2printf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printfa.o(i.__0printf))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = __2printf
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;function_sweep_follow_test
-<LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_EXTI_Callback
+<BR>[Called By]<UL><LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_EXTI_Callback
 </UL>
 
 <P><STRONG><a name="[1c8]"></a>__c89printf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printfa.o(i.__0printf), UNUSED)
@@ -2570,7 +2569,7 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> printfa.o(i.__0printf)
 </UL>
-<P><STRONG><a name="[1aa]"></a>function_step_test</STRONG> (Thumb, 242 bytes, Stack size 16 bytes, main.o(i.function_step_test))
+<P><STRONG><a name="[1aa]"></a>function_step_test</STRONG> (Thumb, 236 bytes, Stack size 16 bytes, main.o(i.function_step_test))
 <BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = function_step_test &rArr; send_data_2_matlab &rArr; HAL_UART_Transmit &rArr; UART_WaitOnFlagUntilTimeout
 </UL>
 <BR>[Calls]<UL><LI><a href="#[120]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MC_ProgramTorqueRampMotor1
@@ -2581,8 +2580,8 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[1ad]"></a>function_sweep_follow_test</STRONG> (Thumb, 322 bytes, Stack size 32 bytes, main.o(i.function_sweep_follow_test))
-<BR><BR>[Stack]<UL><LI>Max Depth = 272<LI>Call Chain = function_sweep_follow_test &rArr; __hardfp_sin &rArr; __ieee754_rem_pio2 &rArr; __aeabi_dmul &rArr; _double_epilogue &rArr; _double_round
+<P><STRONG><a name="[1ad]"></a>function_sweep_follow_test</STRONG> (Thumb, 316 bytes, Stack size 40 bytes, main.o(i.function_sweep_follow_test))
+<BR><BR>[Stack]<UL><LI>Max Depth = 280<LI>Call Chain = function_sweep_follow_test &rArr; __hardfp_sin &rArr; __ieee754_rem_pio2 &rArr; __aeabi_dmul &rArr; _double_epilogue &rArr; _double_round
 </UL>
 <BR>[Calls]<UL><LI><a href="#[1ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_f2d
 <LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dmul
@@ -2592,7 +2591,6 @@ Global Symbols
 <LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
 <LI><a href="#[1ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;send_data_2_matlab
 <LI><a href="#[1ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Get_Encoder_Ruler_Count
-<LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 <LI><a href="#[19a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_sin
 </UL>
 <BR>[Called By]<UL><LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
@@ -2605,7 +2603,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[72]"></a>main</STRONG> (Thumb, 266 bytes, Stack size 16 bytes, main.o(i.main))
-<BR><BR>[Stack]<UL><LI>Max Depth = 288<LI>Call Chain = main &rArr; function_sweep_follow_test &rArr; __hardfp_sin &rArr; __ieee754_rem_pio2 &rArr; __aeabi_dmul &rArr; _double_epilogue &rArr; _double_round
+<BR><BR>[Stack]<UL><LI>Max Depth = 296<LI>Call Chain = main &rArr; function_sweep_follow_test &rArr; __hardfp_sin &rArr; __ieee754_rem_pio2 &rArr; __aeabi_dmul &rArr; _double_epilogue &rArr; _double_round
 </UL>
 <BR>[Calls]<UL><LI><a href="#[13c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_MotorControl_Init
 <LI><a href="#[127]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MC_StartMotor1
